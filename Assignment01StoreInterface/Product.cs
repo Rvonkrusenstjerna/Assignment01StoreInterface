@@ -33,7 +33,7 @@ namespace Assignment01StoreInterface
 
             for (int x = 0; x <= ratings.Length; x++)
             {
-                ratings[x] = random.nex
+                ratings[x] = random.Next(0,10);
             }
 
 

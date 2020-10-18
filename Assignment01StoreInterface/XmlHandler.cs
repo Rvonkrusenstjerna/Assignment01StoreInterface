@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Text;
 
 namespace Assignment01StoreInterface
@@ -12,6 +13,8 @@ namespace Assignment01StoreInterface
 
         public void scrapeAlbum(String url)
         {
+            WebClient webClient = new WebClient();
+            HtmlAgilityPack.HtmlDocument doc = new HtmlDocument();
 
 
 
