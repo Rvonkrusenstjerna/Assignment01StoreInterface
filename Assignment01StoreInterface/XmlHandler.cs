@@ -10,6 +10,8 @@ namespace Assignment01StoreInterface
     {
 
         ///html/body/div[3]/div[3]/div[5]/div[1]/table[2]
+        String url = "https://en.wikipedia.org/wiki/List_of_best-selling_albums";
+
 
 
         public void scrapeAlbum(String url)

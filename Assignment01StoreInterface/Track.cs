@@ -6,9 +6,17 @@ namespace Assignment01StoreInterface
 {
     class Track
     {
-        String namn;
-        public int spelTid; //sekunder
+        String Title;
+        public int RunTime; //sekunder
         List<String> featuring; 
+
+        public Track(String title, int runTime)
+        {
+            this.Title = title;
+            this.RunTime = runTime;
+
+            
+        }
 
 
 

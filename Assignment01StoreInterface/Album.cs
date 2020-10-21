@@ -12,9 +12,9 @@ namespace Assignment01StoreInterface
 
 
 
-        public Album(string title, double betyg, DateTime date, int speltid, double pris, string Artist): base(title, betyg, date, speltid, pris)
+        public Album(string title, double betyg, DateTime date, int speltid, double pris, string artist): base(title, betyg, date, speltid, pris)
         {
-            this.Artist = Artist;
+            this.Artist = artist;
             this.Tracks = new List<Track>();
             
         }
