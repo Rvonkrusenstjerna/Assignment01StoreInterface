@@ -24,23 +24,11 @@ namespace Assignment01StoreInterface
 
         }
 
-        private int[] averageRating()
+        
+        public void PrintInfo()
         {
-
-            Random random = new Random();
-            int[] ratings = new int[10];
-
-
-            for (int x = 0; x <= ratings.Length; x++)
-            {
-                ratings[x] = random.Next(0,10);
-            }
-
-
-
-            return ratings;
+            Console.WriteLine($"Title: {Title} Rating: {Rating} DateTime: {Releasedate.ToString("yyyy-MM-dd")} Runtime: {Runtime} Price: {Price}");
         }
-
 
 
     }

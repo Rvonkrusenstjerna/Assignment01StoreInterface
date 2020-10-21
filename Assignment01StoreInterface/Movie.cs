@@ -11,7 +11,7 @@ namespace Assignment01StoreInterface
 
         public Movie(string title, double betyg, DateTime date, int speltid, double pris, string director) : base(title, betyg, date, speltid, pris)
         {
-            this.Director = Director; 
+            this.Director = director; 
         }
 
 

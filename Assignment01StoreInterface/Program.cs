@@ -10,13 +10,11 @@ namespace Assignment01StoreInterface
 
 
 
-            List <Product> products = new List<Product>();
+            Product P = new Product("Smurfarna", 7, new DateTime(2019, 5, 12), 60, 99);
 
+            P.PrintInfo();
 
-
-            String Robert;
-
-
+            Product M = Movie("Smurfarna", 7, new DateTime(2019, 5, 12), 60, 99, "Charles Dickens");
 
             //Generator
             //25 Movies, 25 Albums,  2 Adresser,

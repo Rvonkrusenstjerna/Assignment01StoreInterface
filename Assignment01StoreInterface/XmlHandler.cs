@@ -18,6 +18,7 @@ namespace Assignment01StoreInterface
             HtmlAgilityPack.HtmlDocument doc = new HtmlDocument();
 
 
+            String title;
 
 
 
