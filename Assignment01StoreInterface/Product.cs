@@ -6,23 +6,38 @@ namespace Assignment01StoreInterface
 {
     class Product
     {
-        String Title;
-        double Rating;
-        DateTime Releasedate;
-        int Runtime { set; get; }
-        double Price;
+        public String Title { set; get; }
+        public double Rating { set; get; }
+        public DateTime Releasedate { set; get; }
+        public TimeSpan Runtime { set; get; }
+        public double Price { set; get; }
 
 
-        public Product(string title, double rating, DateTime date, int runtime, double price)
+
+
+
+
+        public Product(string title, double rating, DateTime date)
         {
 
             this.Title = title;
             this.Rating = rating;
             this.Releasedate = date;
-            this.Runtime = runtime;
+            this.Price = 0;
+
+        }
+
+        public Product(string title, double rating, DateTime date, double price)
+        {
+
+            this.Title = title;
+            this.Rating = rating;
+            this.Releasedate = date;
             this.Price = price;
 
         }
+
+
 
         
         public void PrintInfo()

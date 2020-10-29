@@ -7,35 +7,51 @@ namespace Assignment01StoreInterface
     class Album : Product
     {
 
-        String Artist;
-        public List<Track> Tracks; 
+        public String Artist { set; get; }
+        public List<Track> Tracks;
 
 
-
-        public Album(string title, double betyg, DateTime date, int speltid, double pris, string artist): base(title, betyg, date, speltid, pris)
+        public Album(string title, double rating, DateTime release, string artist, List<Track> tracks) : base(title, rating, release)
         {
             this.Artist = artist;
-            this.Tracks = new List<Track>();
-            
+            this.Tracks = tracks;
+            this.Runtime = getRunTime();
+        }
+
+        public Album(string title, double rating, DateTime release, double pris, string artist, List<Track> tracks): base(title, rating, release, pris)
+        {
+            this.Artist = artist;
+            this.Tracks = tracks;
+            this.Runtime = getRunTime();
         }
         
 
+        public void AddTrack(Track nTrack)
+        {
+            Tracks.Add(nTrack);
+            Runtime = getRunTime();
+
+        }
+        
+        
         public int antalLåtar()
         {
             return Tracks.Count;
         }
 
-        public int trackRuntime()
+        public TimeSpan getRunTime()
         {
 
-            int spelTid = 0;
+            TimeSpan total =new TimeSpan(0,0,0);
+
             foreach (var item in Tracks)
             {
-                spelTid += item.spelTid;
+                total = total.Add(item.RunTime);
+
             }
 
-            return spelTid;
-
+            return total;
+        
         }
         
 

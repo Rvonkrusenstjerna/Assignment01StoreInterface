@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 
 namespace Assignment01StoreInterface
 {
@@ -8,27 +9,37 @@ namespace Assignment01StoreInterface
         static void Main(string[] args)
         {
 
-            List<Product> Products = new List<Product>();
-
-            Product P = new Product("Smurfarna", 7, new DateTime(2019, 5, 12), 60, 99);
-            Product M = new Movie("Sagan Om Ringen", 7, new DateTime(2019, 5, 12), 60, 99, "Charles Dickens");
-
-            Products.Add(P);
-            Products.Add(M);
-
-            foreach (var item in Products)
-            {
-                item.PrintInfo();
-            }
 
 
-            //Generator
-            //25 Movies, 25 Albums,  2 Adresser,
 
+            XmlHandler xh = new XmlHandler();
+            //List<Product> inventory = xh.UserGenerateProductList();
+            //xh.SaveToXML(inventory);
+            //xh.LoadXML();
+
+            List<Product> prod = new List<Product>();
+
+            xh.Scrape();
+
+
+            
+
+
+
+
+
+            //List<Track> tracks = new List<Track>();
+            //tracks.Add(new Track("A", new TimeSpan(0, 1, 0)));
+            //tracks.Add(new Track("B", new TimeSpan(0, 1, 0)));
+            //tracks.Add(new Track("C", new TimeSpan(0, 1, 0)));
+
+            //DateTime release = DateTime.ParseExact("1/12/2008", "d/M/yyyy", CultureInfo.InvariantCulture);
+            //Album Ass = new Album("name", 7, release, 99, "singers", tracks);
+            //Console.WriteLine(Ass.RunTime);
 
 
         }
 
-        
+
     }
 }

@@ -21,7 +21,7 @@ För musikalbum
     *Releasedatum
     *Speltid (i minuter och timmar)
     Antal låtar
-    Pris
+    *Pris
 
 Album innehåller även
 
