@@ -17,12 +17,17 @@ namespace Assignment01StoreInterface
             //xh.SaveToXML(inventory);
             //xh.LoadXML();
 
-            List<Product> prod = new List<Product>();
+            //List<Product> prod = xh.LoadXML();
 
-            xh.Scrape();
+            //foreach (var item in prod)
+            //{
+            //    item.PrintInfo();
+            //}
+
+            xh.SaveToXML(xh.ScrapeMopvies());
 
 
-            
+
 
 
 

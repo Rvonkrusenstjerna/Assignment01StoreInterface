@@ -21,12 +21,17 @@ namespace Assignment01StoreInterface
 
             Random random = new Random();
             
-            public void Scrape()
+            public List<Product> ScrapeMopvies()
             {
+
+                List<Product> movies = new List<Product>();
+            
+            
                 String movieUrl = "https://www.imdb.com/list/ls024149810/";
                 WebClient wc = new WebClient();
                 String movieListHtml = wc.DownloadString(movieUrl);
                 HtmlDocument doc = new HtmlDocument();
+                //doc.OptionEmptyCollection = true;
 
                 doc.LoadHtml(movieListHtml);
                 int x = 1;
@@ -40,7 +45,17 @@ namespace Assignment01StoreInterface
                 //(title, rating, release, runTime, price, dirArt)
                 //link
 
-                string title = item.SelectSingleNode(".//h3/a").InnerText;
+                string title = "";
+
+                if (item.SelectSingleNode(".//h3/a") != null)
+                {
+                    title = item.SelectSingleNode(".//h3/a").InnerText;
+                }
+                else
+                {
+                    title = "Rostbiff";
+                }
+                
                 
                 string rateString  = item.SelectSingleNode(".//*[@class[contains(.,'ipl-rating-star__rating')]]").InnerText;
                 double rating = double.Parse(rateString, CultureInfo.InvariantCulture);
@@ -54,13 +69,34 @@ namespace Assignment01StoreInterface
                 String release = subDoc.DocumentNode.SelectSingleNode(".//*[@title[contains(.,'See more release dates')]]").InnerText;
                 DateTime date = DateTime.Parse(release.Replace(" (Sweden)", ""));
 
-                TimeSpan ts = XmlConvert.ToTimeSpan(subDoc.DocumentNode.SelectSingleNode(".//*[@class[contains(.,'subtext')]]/time").GetAttributeValue("datetime",""));
+                string time = subDoc.DocumentNode.SelectSingleNode(".//*[@class[contains(.,'subtext')]]/time").GetAttributeValue("datetime", "");
+                TimeSpan ts = XmlConvert.ToTimeSpan(time);
 
+                String director = "";
 
-                Product S = new Movie(title, rating, date, ts, 99, "Charlie");
-                S.PrintInfo();
+                if(subDoc.DocumentNode.SelectSingleNode(".//div[h4[text() = 'Director:']]/a")  != null)
+                {
+                    director = subDoc.DocumentNode.SelectSingleNode(".//div[h4[text() = 'Director:']]/a").InnerText;
+                }
                 
-                //Console.WriteLine($"{title} {release} {rating} | {ts} ");
+                else if (subDoc.DocumentNode.SelectNodes(".//div[h4[text() = 'Directors:']]/a") !=  null)
+                {
+
+                    foreach (var node in subDoc.DocumentNode.SelectNodes(".//div[h4[text() = 'Directors:']]/a"))
+                    {
+                        director = director + node.InnerText + ".";
+                    }
+
+                }
+
+                else
+                {
+                    director = "unknown";
+                }
+
+                
+                movies.Add(new Movie(title, rating, date, ts, director));
+                Console.WriteLine($"{title} {release} {rating} | {ts} ");
 
                 
 
@@ -79,7 +115,7 @@ namespace Assignment01StoreInterface
 
 
             //
-
+            return movies;
 
 
 
@@ -177,35 +213,50 @@ namespace Assignment01StoreInterface
                 foreach (XElement item in XDoc.Elements())
                 {
 
-                //This is a movie
-                if (item.FirstAttribute.Value == "movie")
-                {
+                    string title = item.Element("title").Value;
+                    string dirArt = "";
 
-                    Console.WriteLine("This is a movie");
+                    double rating = double.Parse(item.Element("rating").Value, CultureInfo.InvariantCulture);
+                    double price = Convert.ToDouble(item.Element("price").Value);
+
+                    DateTime release = DateTime.Parse(item.Element("release-date>").Value);
+                    TimeSpan runtime = TimeSpan.Parse(item.Element("runtime").Value);
+
+                
+
+                    //This is a movie
+                    if (item.FirstAttribute.Value == "movie")
+                    {
+                        dirArt = item.Element("director").Value;
+
+
+
+
+                        products.Add(new Movie(title, rating, release,runtime,dirArt));
+
+                    }
+
+
+                    //this is an album
+                    else if (item.FirstAttribute.Value == "album")
+                    {
+
+                        Console.WriteLine("This is an album");
+
+                    }
 
                 }
 
-
-                //this is an album
-                else if (item.FirstAttribute.Value == "album")
-                {
-
-                    Console.WriteLine("This is an album");
-
-                }
-
-
-
-
+                return products;
             }
 
                 
             
             
             
-                return products;
+                
 
-            }
+            
             
         
             public void SaveToXML(List<Product> products)
@@ -219,7 +270,8 @@ namespace Assignment01StoreInterface
                     XElement product = new XElement("Product");
                     product.Add(new XElement("title", item.Title),
                                 new XElement("rating", item.Rating),
-                                new XElement("release-date", item.Releasedate.ToString("dd-M-yyyy")));
+                                new XElement("release-date", item.Releasedate.ToString("dd-M-yyyy")),
+                                new XElement("price", item.Price));
 
 
 
@@ -237,7 +289,7 @@ namespace Assignment01StoreInterface
                             XElement tr = new XElement("track");
 
                             tr.Add(new XElement("track-title", track.Title),
-                                   new XElement("track-runtime", track.RunTime.ToString()),
+                                   new XElement("track-runtime", track.Runtime.ToString()),
                                    new XElement("featuring", track.Featuring));
 
                             tracks.Add(tr);
@@ -251,22 +303,22 @@ namespace Assignment01StoreInterface
                     {
                         product.SetAttributeValue("id", "movie");
                         product.Add(new XElement("director", movie.Director));
-                        product.Add(new XElement("RunTime", movie.RunTime.ToString()));
+                        product.Add(new XElement("runtime", movie.Runtime.ToString()));
                     }
 
                     Inventory.Add(product);
 
                     Inventory.Save("D:/inventory.xml");
-                    Console.WriteLine("inventory saved");
+                    
 
 
 
                 }
+                Console.WriteLine("inventory saved");
 
 
 
-
-            }
+        }
 
 
 

@@ -46,7 +46,7 @@ namespace Assignment01StoreInterface
 
             foreach (var item in Tracks)
             {
-                total = total.Add(item.RunTime);
+                total = total.Add(item.Runtime);
 
             }
 

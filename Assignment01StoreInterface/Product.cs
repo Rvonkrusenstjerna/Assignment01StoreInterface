@@ -40,9 +40,9 @@ namespace Assignment01StoreInterface
 
 
         
-        public void PrintInfo()
+        public virtual void PrintInfo()
         {
-            Console.WriteLine($"Title: {Title} Rating: {Rating} DateTime: {Releasedate.ToString("yyyy-MM-dd")} Runtime: {Runtime} Price: {Price}");
+                ;
         }
 
 

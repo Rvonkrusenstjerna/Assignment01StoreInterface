@@ -7,13 +7,13 @@ namespace Assignment01StoreInterface
     class Track
     {
         public String Title { set; get; }
-        public TimeSpan RunTime { set; get; } 
+        public TimeSpan Runtime { set; get; } 
         public  String Featuring { set; get; }
 
         public Track(String title, TimeSpan runTime)
         {
             this.Title = title;
-            this.RunTime = runTime;
+            this.Runtime = runTime;
             this.Featuring = "Various Artists";
             
         }
@@ -21,7 +21,7 @@ namespace Assignment01StoreInterface
         public Track(String title, TimeSpan runTime, String featuring)
         {
             this.Title = title;
-            this.RunTime = runTime;
+            this.Runtime = runTime;
             this.Featuring = featuring;
         
         }
