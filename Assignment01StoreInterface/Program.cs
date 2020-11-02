@@ -21,15 +21,27 @@ namespace Assignment01StoreInterface
 
             //C:\Users\Renox\Source\Repos\Assignment01StoreInterface\Assignment01StoreInterface\movies.xml
             List<Product> prod = xh.LoadXML("C:/Users/Renox/Source/Repos/Assignment01StoreInterface/Assignment01StoreInterface/movies.xml");
+            var sortedMovies = prod.OrderByDescending(x => x.Releasedate);
 
-            var sortedProducts = prod.OrderBy(x => x.Releasedate);
-
-            
-            //Linq, Icomparer
-
-            foreach (var item in sortedProducts)
+            Console.WriteLine("Movies");
+            foreach (var item in sortedMovies)
             {
                 item.PrintInfo();
+            }
+            Console.WriteLine();
+
+
+            //Linq, Icomparer
+
+            List<Product> album = xh.martinAlbum();
+            //var sortedAlbums = album.OrderBy(x => x.Rating);
+            var sortedAlbums = album.OrderByDescending(x => x.Rating);
+
+            Console.WriteLine("Album");
+            foreach (var x in sortedAlbums)
+            {
+                x.PrintInfo();
+
             }
 
             //xh.SaveToXML(xh.ScrapeMopvies());

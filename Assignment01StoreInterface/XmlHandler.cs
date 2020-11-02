@@ -5,6 +5,7 @@ using System.Globalization;
 using System.Linq;
 using System.Net;
 using System.Reflection.Metadata;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading;
 using System.Xml;
@@ -19,7 +20,7 @@ namespace Assignment01StoreInterface
         //by either reading from a local file, scraping websites or dynamically creating from user input.
             
         
-        Random random = new Random();
+            Random random = new Random();
             
             public List<Product> ScrapeMopvies()
             {
@@ -66,7 +67,9 @@ namespace Assignment01StoreInterface
                     double rating = double.Parse(rateString, CultureInfo.InvariantCulture);
 
                     
-                    //Fetches the current movies own profile page to get more 
+                    //Fetches the link to the current movie's own profile page to get more in depth information
+                    //about its Dirctor, release date etc.
+
                     string link = "https://www.imdb.com"+item.SelectSingleNode(".//h3/a").GetAttributeValue("href", "");
                     HtmlDocument subDoc = new HtmlDocument();
                     String movieHtml = wc.DownloadString(link);
@@ -78,13 +81,16 @@ namespace Assignment01StoreInterface
                     string time = subDoc.DocumentNode.SelectSingleNode(".//*[@class[contains(.,'subtext')]]/time").GetAttributeValue("datetime", "");
                     TimeSpan ts = XmlConvert.ToTimeSpan(time);
 
-                    String director = "";
+                    String director = "unknown";
 
+                    
+                    //If node contains a <h4> tag with the text 'Director', store inner text of its inner <a> tag. 
                     if(subDoc.DocumentNode.SelectSingleNode(".//div[h4[text() = 'Director:']]/a")  != null)
                     {
                         director = subDoc.DocumentNode.SelectSingleNode(".//div[h4[text() = 'Director:']]/a").InnerText;
                     }
-                
+                    
+                    //If not, look for <h4> containing Directors and store their names in String.
                     else if (subDoc.DocumentNode.SelectNodes(".//div[h4[text() = 'Directors:']]/a") !=  null)
                     {
 
@@ -94,12 +100,9 @@ namespace Assignment01StoreInterface
                         }
 
                     }
+                    
 
-                    else
-                    {
-                        director = "unknown";
-                    }
-
+                    //Creates new movie object using scraped information and adds it to list.
                     movies.Add(new Movie(title, rating, date, ts, director));
                 
 
@@ -113,15 +116,38 @@ namespace Assignment01StoreInterface
 
         }
 
+            
+            public List<Product> ScrapeAlbum()
+            {
+                List<Product> album = new List<Product>();
 
+                string title, art;
+                double rating, price;
+                    
+
+
+                Track t;
+
+
+
+
+
+
+                
+            
+            
+                return album;
+
+            }
+            
             public List<Product> UserGenerateProductList()
             {
-
+                //This Function returns a list of products created by the user;
                 List<Product> products = new List<Product>();
                 
                 do
                 {
-                    
+
                     string choice = question("Is this a movie or album? m/a");
                     string title = question("Enter Product Name");
                     string dirArt = question("Enter Director or Artists name");
@@ -158,8 +184,7 @@ namespace Assignment01StoreInterface
                             Console.WriteLine("Track Length (h:m:s)");
                             TimeSpan trackTime = TimeSpan.Parse(Console.ReadLine());
 
-                        //Console.WriteLine("Featuring");
-                        //String features = Console.ReadLine();
+                        
                         String features = "Various Artists";
 
                             tracks.Add(new Track(trackTitle, trackTime, features));
@@ -212,7 +237,7 @@ namespace Assignment01StoreInterface
                     string dirArt = "";
                     DateTime release = DateTime.ParseExact(item.Element("release-date").Value, "d-M-yyyy", CultureInfo.InvariantCulture);
 
-                TimeSpan runtime = TimeSpan.Parse(item.Element("runtime").Value);
+                    TimeSpan runtime = TimeSpan.Parse(item.Element("runtime").Value);
 
                 
 
@@ -247,7 +272,48 @@ namespace Assignment01StoreInterface
             
             
                 
+            public List<Product> martinAlbum()
+            {
+                List<Product> album = new List<Product>();
 
+                XElement aXml = XElement.Load("C:/Users/Renox/Source/Repos/Assignment01StoreInterface/Assignment01StoreInterface/AlbumData.xml");
+
+
+
+                foreach (var item in aXml.Elements())
+                {
+
+                    String title = item.Attribute("Title").Value;
+                    String artist = item.Attribute("Artist").Value;
+                    DateTime release = DateTime.Parse(item.Attribute("ReleaseDate").Value);
+                    Double rating = Double.Parse(item.Attribute("AverageUserRating").Value, CultureInfo.InvariantCulture);
+                    Double price = Double.Parse(item.Attribute("Price").Value);
+
+                    List<Track> tracks = new List<Track>();
+
+
+                foreach (var track in item.Elements("Track"))
+                {
+                    string tTitle = track.Attribute("Title").Value;
+                    TimeSpan tTs = TimeSpan.Parse("0:"+track.Attribute("Runtime").Value);
+                    string tArt = track.Attribute("FeatArtist").Value;
+
+                    tracks.Add(new Track(tTitle,tTs,tArt));
+
+                }
+                   
+
+                Product newAlbum = new Album(title, rating, release, artist, tracks);
+                album.Add(new Album(title, rating, release, artist, tracks));
+
+            }
+
+
+
+
+            return album;
+                
+            }
             
             
         

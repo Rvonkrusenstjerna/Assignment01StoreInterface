@@ -53,7 +53,17 @@ namespace Assignment01StoreInterface
             return total;
         
         }
-        
+
+        public override void PrintInfo()
+        {
+            Console.WriteLine($"Title: {Title} Rating: {Rating} DateTime: {Releasedate.ToString("yyyy-MM-dd")} Runtime: {Runtime} Artist: {Artist} Price: {Price}");
+
+            foreach (var item in Tracks)
+            {
+                Console.WriteLine($"\tTitle: {item.Title} Runtime: {item.Runtime} Feat: {item.Featuring}");
+            }
+        }
+
 
 
     }
