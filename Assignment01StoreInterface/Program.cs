@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 
 namespace Assignment01StoreInterface
 {
@@ -17,14 +18,21 @@ namespace Assignment01StoreInterface
             //xh.SaveToXML(inventory);
             //xh.LoadXML();
 
-            //List<Product> prod = xh.LoadXML();
 
-            //foreach (var item in prod)
-            //{
-            //    item.PrintInfo();
-            //}
+            //C:\Users\Renox\Source\Repos\Assignment01StoreInterface\Assignment01StoreInterface\movies.xml
+            List<Product> prod = xh.LoadXML("C:/Users/Renox/Source/Repos/Assignment01StoreInterface/Assignment01StoreInterface/movies.xml");
 
-            xh.SaveToXML(xh.ScrapeMopvies());
+            var sortedProducts = prod.OrderBy(x => x.Releasedate);
+
+            
+            //Linq, Icomparer
+
+            foreach (var item in sortedProducts)
+            {
+                item.PrintInfo();
+            }
+
+            //xh.SaveToXML(xh.ScrapeMopvies());
 
 
 

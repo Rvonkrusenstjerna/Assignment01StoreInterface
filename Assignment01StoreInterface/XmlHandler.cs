@@ -13,106 +13,97 @@ using System.Xml.Linq;
 namespace Assignment01StoreInterface
 {
 
-
-
-
     class XmlHandler
     {
-
-            Random random = new Random();
+        //This class handles the stores inventory, most of the functions returns a list of products created-
+        //by either reading from a local file, scraping websites or dynamically creating from user input.
+            
+        
+        Random random = new Random();
             
             public List<Product> ScrapeMopvies()
             {
 
-                List<Product> movies = new List<Product>();
+                //Scrapes a top list from IMBD and returns it as a list.
             
+                List<Product> movies = new List<Product>();
+                
+                //Creates a HTML document object, first the webclient downloads the html from-
+                //the url and stores it as a string, then we create a Htmldocument object using that string.
             
                 String movieUrl = "https://www.imdb.com/list/ls024149810/";
                 WebClient wc = new WebClient();
                 String movieListHtml = wc.DownloadString(movieUrl);
                 HtmlDocument doc = new HtmlDocument();
-                //doc.OptionEmptyCollection = true;
-
                 doc.LoadHtml(movieListHtml);
-                int x = 1;
-
-
-            //foreach (var item in doc.DocumentNode.SelectNodes("//div[@class[contains(.,'lister-item mode-detail')]]"))
-            foreach (var item in doc.DocumentNode.SelectNodes("//div[@class[contains(.,'lister-item-content')]]"))
-            {
-
-
-                //(title, rating, release, runTime, price, dirArt)
-                //link
-
-                string title = "";
-
-                if (item.SelectSingleNode(".//h3/a") != null)
-                {
-                    title = item.SelectSingleNode(".//h3/a").InnerText;
-                }
-                else
-                {
-                    title = "Rostbiff";
-                }
                 
                 
-                string rateString  = item.SelectSingleNode(".//*[@class[contains(.,'ipl-rating-star__rating')]]").InnerText;
-                double rating = double.Parse(rateString, CultureInfo.InvariantCulture);
-
-                //Take release and runtime from link
-                string link = "https://www.imdb.com"+item.SelectSingleNode(".//h3/a").GetAttributeValue("href", "");
-                HtmlDocument subDoc = new HtmlDocument();
-                String movieHtml = wc.DownloadString(link);
-                subDoc.LoadHtml(movieHtml);
-
-                String release = subDoc.DocumentNode.SelectSingleNode(".//*[@title[contains(.,'See more release dates')]]").InnerText;
-                DateTime date = DateTime.Parse(release.Replace(" (Sweden)", ""));
-
-                string time = subDoc.DocumentNode.SelectSingleNode(".//*[@class[contains(.,'subtext')]]/time").GetAttributeValue("datetime", "");
-                TimeSpan ts = XmlConvert.ToTimeSpan(time);
-
-                String director = "";
-
-                if(subDoc.DocumentNode.SelectSingleNode(".//div[h4[text() = 'Director:']]/a")  != null)
-                {
-                    director = subDoc.DocumentNode.SelectSingleNode(".//div[h4[text() = 'Director:']]/a").InnerText;
-                }
-                
-                else if (subDoc.DocumentNode.SelectNodes(".//div[h4[text() = 'Directors:']]/a") !=  null)
+                //Using the Htmldocument, we loop thorugh all nodes (tags in the html) mathching
+                //the description we ask for, in this case every node containing movies and their information.
+                foreach (var item in doc.DocumentNode.SelectNodes("//div[@class[contains(.,'lister-item-content')]]"))
                 {
 
-                    foreach (var node in subDoc.DocumentNode.SelectNodes(".//div[h4[text() = 'Directors:']]/a"))
+                    //Scrapes the movie's title from a node within the current node.
+                    //if it doesn't find a string at the expected place (if it returns null, nothing)-
+                    //the title value defaults to "unknown"
+                    //(might wanna create a function that does this for all strings)
+                    
+                    string title = "";
+
+                    if (item.SelectSingleNode(".//h3/a") != null)
                     {
-                        director = director + node.InnerText + ".";
+                        title = item.SelectSingleNode(".//h3/a").InnerText;
+                    }
+                    else
+                    {
+                        title = "unknown";
                     }
 
-                }
 
-                else
-                {
-                    director = "unknown";
-                }
+                    //Scrapes the movies rating as a string and converts it to a double.
+                    //imdb uses commas instead of dots,CultureInfo.InvariantCulture is used to correct for this.
+                    string rateString  = item.SelectSingleNode(".//*[@class[contains(.,'ipl-rating-star__rating')]]").InnerText;
+                    double rating = double.Parse(rateString, CultureInfo.InvariantCulture);
 
+                    
+                    //Fetches the current movies own profile page to get more 
+                    string link = "https://www.imdb.com"+item.SelectSingleNode(".//h3/a").GetAttributeValue("href", "");
+                    HtmlDocument subDoc = new HtmlDocument();
+                    String movieHtml = wc.DownloadString(link);
+                    subDoc.LoadHtml(movieHtml);
+
+                    String release = subDoc.DocumentNode.SelectSingleNode(".//*[@title[contains(.,'See more release dates')]]").InnerText;
+                    DateTime date = DateTime.Parse(release.Replace(" (Sweden)", ""));
+
+                    string time = subDoc.DocumentNode.SelectSingleNode(".//*[@class[contains(.,'subtext')]]/time").GetAttributeValue("datetime", "");
+                    TimeSpan ts = XmlConvert.ToTimeSpan(time);
+
+                    String director = "";
+
+                    if(subDoc.DocumentNode.SelectSingleNode(".//div[h4[text() = 'Director:']]/a")  != null)
+                    {
+                        director = subDoc.DocumentNode.SelectSingleNode(".//div[h4[text() = 'Director:']]/a").InnerText;
+                    }
                 
-                movies.Add(new Movie(title, rating, date, ts, director));
-                Console.WriteLine($"{title} {release} {rating} | {ts} ");
+                    else if (subDoc.DocumentNode.SelectNodes(".//div[h4[text() = 'Directors:']]/a") !=  null)
+                    {
 
+                        foreach (var node in subDoc.DocumentNode.SelectNodes(".//div[h4[text() = 'Directors:']]/a"))
+                        {
+                            director = director + node.InnerText + ".";
+                        }
+
+                    }
+
+                    else
+                    {
+                        director = "unknown";
+                    }
+
+                    movies.Add(new Movie(title, rating, date, ts, director));
                 
 
-
-
-
-
-
-            }
-
-
-
-
-
-
-
+                }
 
             //
             return movies;
@@ -202,25 +193,26 @@ namespace Assignment01StoreInterface
                 
             }
         
-            public List<Product> LoadXML()
+            public List<Product> LoadXML(String url)
             {
                 
                 List<Product> products = new List<Product>();
 
-                XElement XDoc = XElement.Load("D:/inventory.xml");
+                XElement XDoc = XElement.Load(url);
 
 
                 foreach (XElement item in XDoc.Elements())
                 {
 
                     string title = item.Element("title").Value;
-                    string dirArt = "";
+                    
 
                     double rating = double.Parse(item.Element("rating").Value, CultureInfo.InvariantCulture);
                     double price = Convert.ToDouble(item.Element("price").Value);
+                    string dirArt = "";
+                    DateTime release = DateTime.ParseExact(item.Element("release-date").Value, "d-M-yyyy", CultureInfo.InvariantCulture);
 
-                    DateTime release = DateTime.Parse(item.Element("release-date>").Value);
-                    TimeSpan runtime = TimeSpan.Parse(item.Element("runtime").Value);
+                TimeSpan runtime = TimeSpan.Parse(item.Element("runtime").Value);
 
                 
 
