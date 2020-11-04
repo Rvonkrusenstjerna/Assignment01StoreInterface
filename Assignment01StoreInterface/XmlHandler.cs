@@ -117,28 +117,7 @@ namespace Assignment01StoreInterface
         }
 
             
-            public List<Product> ScrapeAlbum()
-            {
-                List<Product> album = new List<Product>();
-
-                string title, art;
-                double rating, price;
-                    
-
-
-                Track t;
-
-
-
-
-
-
-                
             
-            
-                return album;
-
-            }
             
             public List<Product> UserGenerateProductList()
             {
@@ -245,22 +224,26 @@ namespace Assignment01StoreInterface
                     if (item.FirstAttribute.Value == "movie")
                     {
                         dirArt = item.Element("director").Value;
-
-
-
-
                         products.Add(new Movie(title, rating, release,runtime,dirArt));
 
                     }
-
-
+                    
                     //this is an album
                     else if (item.FirstAttribute.Value == "album")
                     {
+                        dirArt = item.Element("artist").Value;
+                        List<Track> tracks = new List<Track>();
 
-                        Console.WriteLine("This is an album");
+                    foreach (var track in item.Elements())
+                    {
 
                     }
+
+
+                        products.Add(new Album(title, rating, release,dirArt,tracks));
+
+
+                }
 
                 }
 
@@ -276,11 +259,11 @@ namespace Assignment01StoreInterface
             {
                 List<Product> album = new List<Product>();
 
-                XElement aXml = XElement.Load("C:/Users/Renox/Source/Repos/Assignment01StoreInterface/Assignment01StoreInterface/AlbumData.xml");
+                //XElement aXml = XElement.Load("C:/Users/Renox/Source/Repos/Assignment01StoreInterface/Assignment01StoreInterface/AlbumData.xml");
+                XElement aXml = XElement.Load("AlbumData.xml");
 
 
-
-                foreach (var item in aXml.Elements())
+            foreach (var item in aXml.Elements())
                 {
 
                     String title = item.Attribute("Title").Value;
@@ -366,7 +349,7 @@ namespace Assignment01StoreInterface
 
                     Inventory.Add(product);
 
-                    Inventory.Save("D:/inventory.xml");
+                    Inventory.Save("../../../XML/inventory.xml");
                     
 
 

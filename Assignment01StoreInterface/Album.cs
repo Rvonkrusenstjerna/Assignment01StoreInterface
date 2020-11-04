@@ -34,12 +34,12 @@ namespace Assignment01StoreInterface
         }
         
         
-        public int antalLåtar()
+        public int trackCount()
         {
             return Tracks.Count;
         }
 
-        public TimeSpan getRunTime()
+        private TimeSpan getRunTime()
         {
 
             TimeSpan total =new TimeSpan(0,0,0);
@@ -56,11 +56,11 @@ namespace Assignment01StoreInterface
 
         public override void PrintInfo()
         {
-            Console.WriteLine($"Title: {Title} Rating: {Rating} DateTime: {Releasedate.ToString("yyyy-MM-dd")} Runtime: {Runtime} Artist: {Artist} Price: {Price}");
+            Console.WriteLine($"{Title} Rating: {Rating} DateTime: {Releasedate.ToString("yyyy-MM-dd")} Runtime: {Runtime} Artist: {Artist} Price: {Price}");
 
             foreach (var item in Tracks)
             {
-                Console.WriteLine($"\tTitle: {item.Title} Runtime: {item.Runtime} Feat: {item.Featuring}");
+                Console.WriteLine($"\t{item.trackInfo()}");
             }
         }
 

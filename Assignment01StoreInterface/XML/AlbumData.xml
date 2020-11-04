@@ -1,0 +1,489 @@
+<Albums>
+  <Album Title="Before Meteor" Artist="Nobuo Uematsu, Masayoshi Soken, Ai Yamashita, Naoshi Mizuta, Tsuyoshi Sekito and Ryo Yamazaki" ReleaseDate="2013-08-14" AverageUserRating="7.9" Runtime="365" Price="104" Tracks="665">
+    <Track Title="Prelude - Remembrance" Runtime="5:50" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Opening Theme" Runtime="5:56" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Navigator's Glory - The Theme of Limsa Lominsa" Runtime="3:56" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Freedom" Runtime="5:30" FeatArtist="Nobuo Uematsu" />
+    <Track Title="On Windy Meadows" Runtime="5:18" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Nail of the Heavens" Runtime="3:17" FeatArtist="Nobuo Uematsu" />
+    <Track Title="In the Shadow of the Colossus" Runtime="3:28" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Siren Song" Runtime="2:05" FeatArtist="Masayoshi Soken" />
+    <Track Title="Born of the Boughs - The Theme of Gridania" Runtime="5:02" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Whisper of the Land" Runtime="5:28" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Emerald Labyrinth" Runtime="3:33" FeatArtist="Nobuo Uematsu" />
+    <Track Title="The Forest's Pulse" Runtime="3:04" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Bathed in Woodsin" Runtime="3:28" FeatArtist="Nobuo Uematsu" />
+    <Track Title="March of the Moogles" Runtime="0:44" FeatArtist="Masayoshi Soken" />
+    <Track Title="The Twin Faces of Fate - The Theme of Ul'dah" Runtime="5:32" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Twilight over Thanalan" Runtime="4:12" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Widdershins" Runtime="3:24" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Quicksands" Runtime="4:38" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Desert Moon Defied" Runtime="3:20" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Unspoken" Runtime="3:13" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Pennons Aloft" Runtime="6:01" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Starlight and Sellswords" Runtime="3:50" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Tears for Mor Dhona" Runtime="4:27" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Phantoms on the Lake" Runtime="5:20" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Supply &amp; Demand" Runtime="1:44" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Behind Closed Doors" Runtime="3:28" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Horizons Calling" Runtime="2:51" FeatArtist="Nobuo Uematsu" />
+    <Track Title="No Quarter" Runtime="4:05" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Beneath Bloodied Banners" Runtime="5:50" FeatArtist="Nobuo Uematsu" />
+    <Track Title="With These Hands" Runtime="2:58" FeatArtist="Nobuo Uematsu" />
+    <Track Title="By Design" Runtime="2:20" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Nature's Bounty" Runtime="2:22" FeatArtist="Nobuo Uematsu" />
+    <Track Title="When a Tree Falls" Runtime="1:03" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Decisions" Runtime="2:30" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Crowning Achievements" Runtime="0:11" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Where the Heart Is" Runtime="2:33" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Holy Consult" Runtime="4:39" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Aetherial Slumber" Runtime="3:18" FeatArtist="Nobuo Uematsu" />
+    <Track Title="The Echo" Runtime="1:45" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Fever Dream" Runtime="2:31" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Daring Alliances" Runtime="1:46" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Sacred Bonds" Runtime="2:57" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Piece of Mind" Runtime="3:16" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Inner Recess" Runtime="1:19" FeatArtist="Nobuo Uematsu" />
+    <Track Title="From the Heart" Runtime="2:27" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Fourteen Steps" Runtime="3:13" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Fragments of Forever" Runtime="2:22" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Tranquility" Runtime="2:09" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Neverborn" Runtime="2:08" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Everbinding Oath" Runtime="2:37" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Heavensturn" Runtime="4:27" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Moonfire Faire" Runtime="3:23" FeatArtist="Nobuo Uematsu" />
+    <Track Title="All Saints' Wake" Runtime="3:15" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Starlight Celebration" Runtime="6:05" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Conflagration" Runtime="5:02" FeatArtist="Nobuo Uematsu" />
+    <Track Title="The Hero of Hatchingtide" Runtime="0:07" FeatArtist="Masayoshi Soken" />
+    <Track Title="Enraptured" Runtime="4:02" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Battle Drums" Runtime="4:02" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Bo-down" Runtime="2:53" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Fury" Runtime="5:18" FeatArtist="Nobuo Uematsu" />
+    <Track Title="The Seventh Gate" Runtime="5:40" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Victory Fanfare (short)" Runtime="0:11" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Without Shadow" Runtime="3:08" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Canticle" Runtime="1:19" FeatArtist="Ai Yamashita" />
+    <Track Title="Wrath of the Eikons" Runtime="3:51" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Primal Judgment" Runtime="5:07" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Final Respite" Runtime="3:31" FeatArtist="Nobuo Uematsu" />
+    <Track Title="The Dark's Embrace" Runtime="3:32" FeatArtist="Nobuo Uematsu" />
+    <Track Title="The Dark's Kiss" Runtime="3:28" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Nemesis" Runtime="4:53" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Victory Fanfare (full)" Runtime="0:40" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Maelstrom Command" Runtime="5:50" FeatArtist="Naoshi Mizuta" />
+    <Track Title="Into the Adder's Den" Runtime="4:11" FeatArtist="Tsuyoshi Sekito" />
+    <Track Title="The Hall of Flames" Runtime="4:33" FeatArtist="Ryo Yamazaki" />
+    <Track Title="Honor and Duty" Runtime="0:08" FeatArtist="Masayoshi Soken" />
+    <Track Title="Eorzea de Chocobo" Runtime="4:24" FeatArtist="Masayoshi Soken" />
+    <Track Title="Ripples in the Sea" Runtime="1:15" FeatArtist="Ryo Yamazaki" />
+    <Track Title="The Sand's Secret" Runtime="1:30" FeatArtist="Ryo Yamazaki" />
+    <Track Title="Dewdrops &amp; Moonbeams" Runtime="1:44" FeatArtist="Ryo Yamazaki" />
+    <Track Title="Dreams Aloft" Runtime="1:20" FeatArtist="Ryo Yamazaki" />
+    <Track Title="Airborne" Runtime="0:29" FeatArtist="Masayoshi Soken" />
+    <Track Title="Birds of a Feather" Runtime="1:25" FeatArtist="Masayoshi Soken" />
+    <Track Title="Flee Together" Runtime="1:52" FeatArtist="Masayoshi Soken" />
+    <Track Title="Quick as Silver, Hard as Stone" Runtime="5:00" FeatArtist="Naoshi Mizuta" />
+    <Track Title="Flightless Wings" Runtime="4:14" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Pitfire" Runtime="2:56" FeatArtist="Nobuo Uematsu" />
+    <Track Title="The Promise of Plunder" Runtime="3:49" FeatArtist="Masayoshi Soken" />
+    <Track Title="Meteor" Runtime="4:06" FeatArtist="Ryo Yamazaki" />
+    <Track Title="Seven Jesters" Runtime="3:02" FeatArtist="Masayoshi Soken" />
+    <Track Title="Good King Moggle Mog XII" Runtime="5:38" FeatArtist="Masayoshi Soken" />
+    <Track Title="The Rider's Boon" Runtime="3:20" FeatArtist="Tsuyoshi Sekito" />
+    <Track Title="Breaking Boundaries" Runtime="3:20" FeatArtist="Masayoshi Soken" />
+    <Track Title="Relics" Runtime="1:58" FeatArtist="Masayoshi Soken" />
+    <Track Title="In the Arms of Althyk" Runtime="0:11" FeatArtist="Masayoshi Soken" />
+    <Track Title="Agents of Inquiry" Runtime="2:43" FeatArtist="Masayoshi Soken" />
+    <Track Title="The Tug of Fate" Runtime="4:30" FeatArtist="Masayoshi Soken" />
+    <Track Title="To the Fore" Runtime="6:32" FeatArtist="Masayoshi Soken" />
+    <Track Title="Imperial Will" Runtime="5:09" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Steel Reason" Runtime="4:17" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Imperium" Runtime="6:28" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Fallen Angel" Runtime="7:09" FeatArtist="Masayoshi Soken" />
+    <Track Title="Tempest" Runtime="7:51" FeatArtist="Nobuo Uematsu" />
+    <Track Title="Rise of the White Raven" Runtime="5:51" FeatArtist="Masayoshi Soken" />
+    <Track Title="Answers" Runtime="7:09" FeatArtist="Nobuo Uematsu" />
+  </Album>
+  <Album Title="Power Rangers Redux" Artist="Ron Wasserman" ReleaseDate="2012-10-22" AverageUserRating="9.6" Runtime="85" Price="21" Tracks="57">
+    <Track Title="Go Go Power Rangers (Redux)" Runtime="3:58" FeatArtist="" />
+    <Track Title="Fight (Redux)" Runtime="3:58" FeatArtist="" />
+    <Track Title="Hope For the World (Redux)" Runtime="4:36" FeatArtist="" />
+    <Track Title="Combat (Redux)" Runtime="4:59" FeatArtist="" />
+    <Track Title="Cross My Line (Redux)" Runtime="3:14" FeatArtist="" />
+    <Track Title="Lord Zedd (Redux)" Runtime="2:40" FeatArtist="" />
+    <Track Title="We Need a Hero (Redux)" Runtime="5:36" FeatArtist="" />
+    <Track Title="Go Green Ranger Go (Redux)" Runtime="3:02" FeatArtist="" />
+    <Track Title="Unite (Redux)" Runtime="4:14" FeatArtist="" />
+    <Track Title="5-4-1 (Redux)" Runtime="2:24" FeatArtist="" />
+    <Track Title="I Will Win (Redux)" Runtime="5:34" FeatArtist="" />
+    <Track Title="Go Go Power Rangers (Instrumental Redux)" Runtime="3:58" FeatArtist="" />
+    <Track Title="Fight (Instrumental Redux)" Runtime="3:56" FeatArtist="" />
+    <Track Title="Hope for the World (Instrumental Redux)" Runtime="4:36" FeatArtist="" />
+    <Track Title="Combat (Instrumental Redux)" Runtime="4:58" FeatArtist="" />
+    <Track Title="Cross My Line (Instrumental Redux)" Runtime="3:15" FeatArtist="" />
+    <Track Title="We Need a Hero (Instrumental Redux)" Runtime="5:35" FeatArtist="" />
+    <Track Title="Go Green Ranger Go (Instrumental Redux)" Runtime="3:03" FeatArtist="" />
+    <Track Title="Unite (Instrumental Redux)" Runtime="4:14" FeatArtist="" />
+    <Track Title="5-4-1 (Instrumental Redux)" Runtime="2:24" FeatArtist="" />
+    <Track Title="I WIll Win (Instrumental Redux)" Runtime="5:25" FeatArtist="" />
+  </Album>
+  <Album Title="Escapology" Artist="Robbie Williams" ReleaseDate="2002-10-10" AverageUserRating="8.2" Runtime="73" Price="16" Tracks="159">
+    <Track Title="How Peculiar" Runtime="3:13" FeatArtist="" />
+    <Track Title="Feel" Runtime="4:23" FeatArtist="" />
+    <Track Title="Something Beautiful" Runtime="4:48" FeatArtist="" />
+    <Track Title="Monsoon" Runtime="3:46" FeatArtist="" />
+    <Track Title="Sexed Up" Runtime="4:21" FeatArtist="" />
+    <Track Title="Love Somebody" Runtime="4:10" FeatArtist="" />
+    <Track Title="Revolution" Runtime="5:44" FeatArtist="Rose Stone" />
+    <Track Title="Handsome Man" Runtime="3:56" FeatArtist="" />
+    <Track Title="Come Undone" Runtime="4:38" FeatArtist="" />
+    <Track Title="Me and My Monkey" Runtime="7:12" FeatArtist="" />
+    <Track Title="Song 3" Runtime="3:50" FeatArtist="" />
+    <Track Title="Hot Fudge" Runtime="4:08" FeatArtist="" />
+    <Track Title="Cursed" Runtime="4:01" FeatArtist="" />
+    <Track Title="Nan's Song" Runtime="3:52" FeatArtist="" />
+    <Track Title="How Peculiar (Reprise)" Runtime="2:14" FeatArtist="" />
+    <Track Title="I Tried Love" Runtime="3:31" FeatArtist="" />
+  </Album>
+  <Album Title="Robyn" Artist="Robyn" ReleaseDate="2005-04-29" AverageUserRating="8.8" Runtime="38" Price="13" Tracks="79">
+    <Track Title="Curriculum Vitae" Runtime="1:53" FeatArtist="" />
+    <Track Title="Who's That Girl" Runtime="3:47" FeatArtist="" />
+    <Track Title="Handle Me" Runtime="3:47" FeatArtist="" />
+    <Track Title="Robotboy" Runtime="3:31" FeatArtist="" />
+    <Track Title="Be Mine!" Runtime="3:27" FeatArtist="" />
+    <Track Title="Bionic Woman (Interlude)" Runtime="0:16" FeatArtist="" />
+    <Track Title="Crash and Burn Girl" Runtime="3:35" FeatArtist="" />
+    <Track Title="Tomteverkstan (Interlude)" Runtime="0:17" FeatArtist="" />
+    <Track Title="Konichiwa Bitches" Runtime="2:37" FeatArtist="" />
+    <Track Title="Burn Like You" Runtime="3:42" FeatArtist="" />
+    <Track Title="Eclipse" Runtime="3:29" FeatArtist="" />
+    <Track Title="Should Have Known" Runtime="3:59" FeatArtist="" />
+    <Track Title="Anytime You Like" Runtime="3:52" FeatArtist="" />
+  </Album>
+  <Album Title="Joyride" Artist="Roxette" ReleaseDate="1991-03-28" AverageUserRating="7.0" Runtime="59" Price="15" Tracks="99">
+    <Track Title="Joyride" Runtime="4:24" FeatArtist="" />
+    <Track Title="Hotblooded" Runtime="3:18" FeatArtist="" />
+    <Track Title="Fading Like a Flower (Every Time You Leave)" Runtime="3:52" FeatArtist="" />
+    <Track Title="Knockin' on Every Door" Runtime="3:56" FeatArtist="" />
+    <Track Title="Spending My Time" Runtime="4:36" FeatArtist="" />
+    <Track Title="I Remember You" Runtime="3:54" FeatArtist="" />
+    <Track Title="Watercolours in the Rain" Runtime="3:40" FeatArtist="" />
+    <Track Title="The Big L." Runtime="4:26" FeatArtist="" />
+    <Track Title="Soul Deep" Runtime="3:34" FeatArtist="" />
+    <Track Title="(Do You Get) Excited?" Runtime="4:16" FeatArtist="" />
+    <Track Title="Church of Your Heart" Runtime="3:16" FeatArtist="" />
+    <Track Title="Small Talk" Runtime="3:53" FeatArtist="" />
+    <Track Title="Physical Fascination" Runtime="3:27" FeatArtist="" />
+    <Track Title="Things Will Never Be the Same" Runtime="4:26" FeatArtist="" />
+    <Track Title="Perfect Day" Runtime="4:05" FeatArtist="" />
+  </Album>
+  <Album Title="What if This CD... Had Lyrics?" Artist="brentalfloss" ReleaseDate="2010-04-26" AverageUserRating="4.6" Runtime="49" Price="20" Tracks="70">
+    <Track Title="Ducktales with Lyrics (Moon Theme)" Runtime="2:51" FeatArtist="" />
+    <Track Title="Gypsy Tetris" Runtime="0:22" FeatArtist="" />
+    <Track Title="Tetris with Lyrics (A-type, Gameboy)" Runtime="1:51" FeatArtist="" />
+    <Track Title="Corey" Runtime="3:18" FeatArtist="" />
+    <Track Title="Final Fantasy Victory Theme with Lyrics" Runtime="1:02" FeatArtist="" />
+    <Track Title="Good Example" Runtime="1:45" FeatArtist="" />
+    <Track Title="Mega Man 3 with Lyrics (Title Theme)" Runtime="2:28" FeatArtist="" />
+    <Track Title="Bubble Man with Lyrics (Mega Man 2)" Runtime="1:52" FeatArtist="" />
+    <Track Title="Final Fantasy Classic with Lyrics" Runtime="3:05" FeatArtist="" />
+    <Track Title="A Boy and his Blob Mini-Lyric (Earth Theme)" Runtime="0:39" FeatArtist="" />
+    <Track Title="Gotta Run / Be the One" Runtime="3:44" FeatArtist="The Megas" />
+    <Track Title="Paperboy with Lyrics (NES Main Theme)" Runtime="5:25" FeatArtist="The Konami Kode" />
+    <Track Title="Mario Piano Medley" Runtime="3:36" FeatArtist="" />
+    <Track Title="Final Fantasy IV Love Theme with Lyrics" Runtime="1:29" FeatArtist="" />
+    <Track Title="The Roomamte Song" Runtime="3:01" FeatArtist="" />
+    <Track Title="Dr. Mario with Lyrics (Fever Theme)" Runtime="1:30" FeatArtist="" />
+    <Track Title="Introspective Duck in Space (Ducktales Moon Theme)" Runtime="1:30" FeatArtist="" />
+    <Track Title="Mushroom Kingdom (Parody of &quot;Sister Christian&quot; by Night Ranger)" Runtime="2:53" FeatArtist="" />
+    <Track Title="Zelda with Lyrics" Runtime="2:15" FeatArtist="" />
+    <Track Title="The End?" Runtime="4:48" FeatArtist="" />
+  </Album>
+  <Album Title="Queen" Artist="Queen" ReleaseDate="1973-07-13" AverageUserRating="7.3" Runtime="38" Price="10" Tracks="159">
+    <Track Title="Keep Yourself Alive" Runtime="3:47" FeatArtist="" />
+    <Track Title="Doing All Right" Runtime="4:09" FeatArtist="" />
+    <Track Title="Great King Rat" Runtime="5:43" FeatArtist="" />
+    <Track Title="My Fairy King" Runtime="4:08" FeatArtist="" />
+    <Track Title="Liar" Runtime="6:25" FeatArtist="" />
+    <Track Title="The Night Comes Down" Runtime="4:23" FeatArtist="" />
+    <Track Title="Modern Times Rock &amp; Roll" Runtime="1:48" FeatArtist="" />
+    <Track Title="Son &amp; Daughter" Runtime="3:20" FeatArtist="" />
+    <Track Title="Jesus" Runtime="3:44" FeatArtist="" />
+    <Track Title="Seven Seas of Rhye" Runtime="1:15" FeatArtist="" />
+  </Album>
+  <Album Title="Queen II" Artist="Queen" ReleaseDate="1974-03-08" AverageUserRating="8.7" Runtime="40" Price="11" Tracks="159">
+    <Track Title="Procession" Runtime="1:12" FeatArtist="" />
+    <Track Title="Father to Son" Runtime="6:12" FeatArtist="" />
+    <Track Title="White Queen (As It Began)" Runtime="4:33" FeatArtist="" />
+    <Track Title="Some Day One Day" Runtime="4:21" FeatArtist="" />
+    <Track Title="Loser in the End" Runtime="4:01" FeatArtist="" />
+    <Track Title="Ogre Battle" Runtime="4:08" FeatArtist="" />
+    <Track Title="Fairy Teller's Master-Stroke" Runtime="2:39" FeatArtist="" />
+    <Track Title="Nevermore" Runtime="1:17" FeatArtist="" />
+    <Track Title="March of the Black Queen" Runtime="6:03" FeatArtist="" />
+    <Track Title="Funny How Love Is" Runtime="3:14" FeatArtist="" />
+    <Track Title="Seven Seas of Rhye" Runtime="2:48" FeatArtist="" />
+  </Album>
+  <Album Title="Sheer Heart Attack" Artist="Queen" ReleaseDate="1974-11-08" AverageUserRating="8.0" Runtime="39" Price="13" Tracks="159">
+    <Track Title="Brighton Rock" Runtime="5:08" FeatArtist="" />
+    <Track Title="Killer Queen" Runtime="2:57" FeatArtist="" />
+    <Track Title="Tenement Funster" Runtime="2:48" FeatArtist="" />
+    <Track Title="Flick of the Wrist" Runtime="3:46" FeatArtist="" />
+    <Track Title="Lily of the Valley" Runtime="1:43" FeatArtist="" />
+    <Track Title="Now I'm Here" Runtime="4:10" FeatArtist="" />
+    <Track Title="In the Lap of the Gods" Runtime="3:20" FeatArtist="" />
+    <Track Title="Stone Cold Crazy" Runtime="2:12" FeatArtist="" />
+    <Track Title="Dear Friends" Runtime="1:07" FeatArtist="" />
+    <Track Title="Misfire" Runtime="1:50" FeatArtist="" />
+    <Track Title="Bring Back that Leroy Brown" Runtime="2:13" FeatArtist="" />
+    <Track Title="She Makes Me (Stormtrooper in Stilettoes)" Runtime="4:08" FeatArtist="" />
+    <Track Title="In the Lap of the Gods... Revisited" Runtime="3:42" FeatArtist="" />
+  </Album>
+  <Album Title="A Night at the Opera" Artist="Queen" ReleaseDate="1975-11-21" AverageUserRating="7.7" Runtime="43" Price="12" Tracks="159">
+    <Track Title="Death on Two Legs (Dedicated To...)" Runtime="3:43" FeatArtist="" />
+    <Track Title="Lazing on a Sunday Afternoon" Runtime="1:08" FeatArtist="" />
+    <Track Title="I'm in Love with my Car" Runtime="3:05" FeatArtist="" />
+    <Track Title="You're My Best Friend" Runtime="2:50" FeatArtist="" />
+    <Track Title="'39" Runtime="3:25" FeatArtist="" />
+    <Track Title="Sweet Lady" Runtime="4:01" FeatArtist="" />
+    <Track Title="Seaside Rendezvous" Runtime="2:13" FeatArtist="" />
+    <Track Title="Prophet's Song" Runtime="8:17" FeatArtist="" />
+    <Track Title="Love of My Life" Runtime="3:38" FeatArtist="" />
+    <Track Title="Good Company" Runtime="3:26" FeatArtist="" />
+    <Track Title="Bohemian Rhapsody" Runtime="5:55" FeatArtist="" />
+    <Track Title="God Save the Queen" Runtime="1:11" FeatArtist="" />
+  </Album>
+  <Album Title="A Day at the Races" Artist="Queen" ReleaseDate="1976-12-10" AverageUserRating="7.5" Runtime="43" Price="10" Tracks="159">
+    <Track Title="Tie Your Mother Down" Runtime="4:46" FeatArtist="" />
+    <Track Title="You Take My Breath Away" Runtime="4:40" FeatArtist="" />
+    <Track Title="Long Away" Runtime="3:55" FeatArtist="" />
+    <Track Title="Millionaire Waltz" Runtime="4:52" FeatArtist="" />
+    <Track Title="You and I" Runtime="3:23" FeatArtist="" />
+    <Track Title="Somebody to Love" Runtime="4:57" FeatArtist="" />
+    <Track Title="White Man" Runtime="4:56" FeatArtist="" />
+    <Track Title="Good Old Fashioned Lover Boy" Runtime="2:54" FeatArtist="" />
+    <Track Title="Drowse" Runtime="3:41" FeatArtist="" />
+    <Track Title="Teo Torriatte (Let Us Cling Together)" Runtime="5:51" FeatArtist="" />
+  </Album>
+  <Album Title="News of the World" Artist="Queen" ReleaseDate="1977-10-28" AverageUserRating="6.5" Runtime="39" Price="11" Tracks="199">
+    <Track Title="We Will Rock You" Runtime="2:01" FeatArtist="" />
+    <Track Title="We Are the Champions" Runtime="2:59" FeatArtist="" />
+    <Track Title="Sheer Heart Attack" Runtime="3:24" FeatArtist="" />
+    <Track Title="All Dead, All Dead" Runtime="3:09" FeatArtist="" />
+    <Track Title="Spread Your Wings" Runtime="4:32" FeatArtist="" />
+    <Track Title="Fight From the Inside" Runtime="3:03" FeatArtist="" />
+    <Track Title="Get Down, Make Love" Runtime="3:51" FeatArtist="" />
+    <Track Title="Sleeping on the Sidewalk" Runtime="3:07" FeatArtist="" />
+    <Track Title="Who Needs You" Runtime="3:07" FeatArtist="" />
+    <Track Title="It's Late" Runtime="6:27" FeatArtist="" />
+    <Track Title="My Melancholy Blues" Runtime="3:29" FeatArtist="" />
+  </Album>
+  <Album Title="Jazz" Artist="Queen" ReleaseDate="1978-11-10" AverageUserRating="7.0" Runtime="44" Price="13" Tracks="159">
+    <Track Title="Mustapha" Runtime="3:00" FeatArtist="" />
+    <Track Title="Fat Bottomed Girls" Runtime="4:16" FeatArtist="" />
+    <Track Title="Jealousy" Runtime="3:13" FeatArtist="" />
+    <Track Title="Bicycle Race" Runtime="3:02" FeatArtist="" />
+    <Track Title="If You Can't Beat Them" Runtime="4:15" FeatArtist="" />
+    <Track Title="Let Me Entertain You" Runtime="3:02" FeatArtist="" />
+    <Track Title="Dead On Time" Runtime="3:22" FeatArtist="" />
+    <Track Title="In Only Seven Days" Runtime="2:28" FeatArtist="" />
+    <Track Title="Dreamer's Ball" Runtime="3:30" FeatArtist="" />
+    <Track Title="Fun It" Runtime="3:29" FeatArtist="" />
+    <Track Title="Leaving Home Ain't Easy" Runtime="3:14" FeatArtist="" />
+    <Track Title="Don't Stop Me Now" Runtime="3:29" FeatArtist="" />
+    <Track Title="More of that Jazz" Runtime="4:20" FeatArtist="" />
+  </Album>
+  <Album Title="The Game" Artist="Queen" ReleaseDate="1980-06-30" AverageUserRating="5.6" Runtime="34" Price="10" Tracks="159">
+    <Track Title="Play the Game" Runtime="3:32" FeatArtist="" />
+    <Track Title="Dragon Attack" Runtime="4:15" FeatArtist="" />
+    <Track Title="Another One Bites the Dust" Runtime="3:03" FeatArtist="" />
+    <Track Title="Need Your Loving Tonight" Runtime="2:48" FeatArtist="" />
+    <Track Title="Crazy Little Thing Called Love" Runtime="2:44" FeatArtist="" />
+    <Track Title="Rock It (Prime Jive)" Runtime="4:32" FeatArtist="" />
+    <Track Title="Don't Try Suicide" Runtime="3:52" FeatArtist="" />
+    <Track Title="Sail Away Sweet Sister" Runtime="3:32" FeatArtist="" />
+    <Track Title="Coming Soon" Runtime="2:49" FeatArtist="" />
+    <Track Title="Save Me" Runtime="3:42" FeatArtist="" />
+  </Album>
+  <Album Title="Flash Gordon" Artist="Queen" ReleaseDate="1980-11-24" AverageUserRating="4.3" Runtime="35" Price="18" Tracks="159">
+    <Track Title="Flash's Theme" Runtime="3:29" FeatArtist="" />
+    <Track Title="In the Space Capsule (The Love Theme)" Runtime="2:42" FeatArtist="" />
+    <Track Title="Ming's Theme (In Court of Ming the Merciless)" Runtime="2:40" FeatArtist="" />
+    <Track Title="Ring (Hypnotic Seduction of Dale)" Runtime="0:57" FeatArtist="" />
+    <Track Title="Football Fight" Runtime="1:28" FeatArtist="" />
+    <Track Title="In the Death Cell (Love Theme Reprise)" Runtime="2:24" FeatArtist="" />
+    <Track Title="Execution of Flash" Runtime="1:05" FeatArtist="" />
+    <Track Title="Kiss (Aura Resurrects Flash)" Runtime="1:44" FeatArtist="" />
+    <Track Title="Arboria (Planet of the Tree Men)" Runtime="1:41" FeatArtist="" />
+    <Track Title="Escape from the Swamp" Runtime="1:43" FeatArtist="" />
+    <Track Title="Flash to the Rescue" Runtime="2:44" FeatArtist="" />
+    <Track Title="Vultan's Theme (Attack of the Hawk Men)" Runtime="1:12" FeatArtist="" />
+    <Track Title="Battle Theme" Runtime="2:18" FeatArtist="" />
+    <Track Title="Wedding March" Runtime="0:56" FeatArtist="" />
+    <Track Title="Marriage of Dale and Ming (And Flash Approaching)" Runtime="2:04" FeatArtist="" />
+    <Track Title="Crash Dive on Mingo City" Runtime="1:00" FeatArtist="" />
+    <Track Title="Flash's Theme Reprise (Victory Celebrations)" Runtime="1:23" FeatArtist="" />
+    <Track Title="Hero" Runtime="3:31" FeatArtist="" />
+  </Album>
+  <Album Title="Hot Space" Artist="Queen" ReleaseDate="1982-05-21" AverageUserRating="3.8" Runtime="45" Price="11" Tracks="159">
+    <Track Title="Staying Power" Runtime="4:10" FeatArtist="" />
+    <Track Title="Dancer" Runtime="3:46" FeatArtist="" />
+    <Track Title="Back Chat" Runtime="4:31" FeatArtist="" />
+    <Track Title="Body Language" Runtime="4:29" FeatArtist="" />
+    <Track Title="Action this Day" Runtime="3:32" FeatArtist="" />
+    <Track Title="Put Out the Fire" Runtime="3:18" FeatArtist="" />
+    <Track Title="Life is Real (Song for Lennon)" Runtime="3:28" FeatArtist="" />
+    <Track Title="Calling All Girls" Runtime="3:50" FeatArtist="" />
+    <Track Title="Palabras de Amor (The Words of Love)" Runtime="4:26" FeatArtist="" />
+    <Track Title="Cool Cat" Runtime="3:26" FeatArtist="" />
+    <Track Title="Under Pressure" Runtime="4:02" FeatArtist="" />
+  </Album>
+  <Album Title="The Works" Artist="Queen" ReleaseDate="1984-02-27" AverageUserRating="5.8" Runtime="37" Price="9" Tracks="199">
+    <Track Title="Radio Ga Ga" Runtime="5:49" FeatArtist="" />
+    <Track Title="Tear It Up" Runtime="3:28" FeatArtist="" />
+    <Track Title="It's a Hard Life" Runtime="4:08" FeatArtist="" />
+    <Track Title="Man on the Prowl" Runtime="3:28" FeatArtist="" />
+    <Track Title="Machines (Back to Humans)" Runtime="5:10" FeatArtist="" />
+    <Track Title="I Want to Break Free" Runtime="3:20" FeatArtist="" />
+    <Track Title="Keep Passing the Open Windows" Runtime="5:21" FeatArtist="" />
+    <Track Title="Human to Fall" Runtime="4:28" FeatArtist="" />
+    <Track Title="Is This the World We Created...?" Runtime="2:13" FeatArtist="" />
+  </Album>
+  <Album Title="A Kind of Magic" Artist="Queen" ReleaseDate="1986-06-02" AverageUserRating="6.0" Runtime="40" Price="9" Tracks="159">
+    <Track Title="One Vision" Runtime="5:08" FeatArtist="" />
+    <Track Title="Kind of Magic" Runtime="4:23" FeatArtist="" />
+    <Track Title="One Year of Love" Runtime="4:26" FeatArtist="" />
+    <Track Title="Pain is so Close to Pleasure" Runtime="4:29" FeatArtist="" />
+    <Track Title="Friends Will be Friends" Runtime="4:07" FeatArtist="" />
+    <Track Title="Who Wants to Live Forever" Runtime="5:13" FeatArtist="" />
+    <Track Title="Gimmie the Prize (Kurgan's Theme)" Runtime="4:32" FeatArtist="" />
+    <Track Title="Don't Lose Your Head" Runtime="4:35" FeatArtist="" />
+    <Track Title="Princes of the Universe" Runtime="3:30" FeatArtist="" />
+  </Album>
+  <Album Title="The Miracle" Artist="Queen" ReleaseDate="1988-05-22" AverageUserRating="6.4" Runtime="41" Price="10" Tracks="159">
+    <Track Title="Party" Runtime="2:24" FeatArtist="" />
+    <Track Title="Khashoggi's Ship" Runtime="2:47" FeatArtist="" />
+    <Track Title="Miracle" Runtime="5:02" FeatArtist="" />
+    <Track Title="I Want It All" Runtime="4:40" FeatArtist="" />
+    <Track Title="Invisible Man" Runtime="3:56" FeatArtist="" />
+    <Track Title="Breakthru" Runtime="4:07" FeatArtist="" />
+    <Track Title="Rain Must Fall" Runtime="4:20" FeatArtist="" />
+    <Track Title="Scandal" Runtime="4:42" FeatArtist="" />
+    <Track Title="My Baby Does Me" Runtime="3:22" FeatArtist="" />
+    <Track Title="Was It All Worth It?" Runtime="5:45" FeatArtist="" />
+  </Album>
+  <Album Title="Innuendo" Artist="Queen" ReleaseDate="1991-02-04" AverageUserRating="7.7" Runtime="53" Price="12" Tracks="159">
+    <Track Title="Innuendo" Runtime="6:31" FeatArtist="" />
+    <Track Title="I'm Going Slightly Mad" Runtime="4:22" FeatArtist="" />
+    <Track Title="Headlong" Runtime="4:38" FeatArtist="" />
+    <Track Title="I Can't Live With You" Runtime="4:33" FeatArtist="" />
+    <Track Title="Don't Try So Hard" Runtime="3:38" FeatArtist="" />
+    <Track Title="Ride the Wild Wind" Runtime="4:42" FeatArtist="" />
+    <Track Title="All God's People" Runtime="4:21" FeatArtist="" />
+    <Track Title="These Are the Days of Our Lives" Runtime="4:15" FeatArtist="" />
+    <Track Title="Delilah" Runtime="3:35" FeatArtist="" />
+    <Track Title="Hitman" Runtime="4:56" FeatArtist="" />
+    <Track Title="Bijou" Runtime="3:36" FeatArtist="" />
+    <Track Title="Show Must Go On" Runtime="4:32" FeatArtist="" />
+  </Album>
+  <Album Title="Made in Heaven" Artist="Queen" ReleaseDate="1995-11-06" AverageUserRating="6.6" Runtime="70" Price="13" Tracks="159">
+    <Track Title="It's a Beautiful Day" Runtime="2:32" FeatArtist="" />
+    <Track Title="Made in Heaven" Runtime="5:25" FeatArtist="" />
+    <Track Title="Let Me Live" Runtime="4:45" FeatArtist="" />
+    <Track Title="Mother Love" Runtime="4:49" FeatArtist="" />
+    <Track Title="My Life Has Been Saved" Runtime="3:15" FeatArtist="" />
+    <Track Title="I Was Born to Love You" Runtime="4:49" FeatArtist="" />
+    <Track Title="Heaven For Everyone" Runtime="5:36" FeatArtist="" />
+    <Track Title="Too Much Love Will Kill You" Runtime="4:20" FeatArtist="" />
+    <Track Title="You Don't Fool Me" Runtime="5:24" FeatArtist="" />
+    <Track Title="A Winter's Tale" Runtime="3:49" FeatArtist="" />
+    <Track Title="It's a Beautiful Day (Reprise)" Runtime="3:01" FeatArtist="" />
+    <Track Title="Yeah [Hidden Track]" Runtime="0:04" FeatArtist="" />
+    <Track Title="untitled [Hidden Track]" Runtime="22:32" FeatArtist="" />
+  </Album>
+  <Album Title="The Cosmos Rocks" Artist="Queen + Paul Rodgers" ReleaseDate="2008-09-15" AverageUserRating="3.9" Runtime="58" Price="14" Tracks="129">
+    <Track Title="Cosmos Rockin'" Runtime="4:11" FeatArtist="" />
+    <Track Title="Time to Shine" Runtime="4:23" FeatArtist="" />
+    <Track Title="Still Burnin'" Runtime="4:03" FeatArtist="" />
+    <Track Title="Small" Runtime="4:39" FeatArtist="" />
+    <Track Title="Warboys" Runtime="3:18" FeatArtist="" />
+    <Track Title="We Believe" Runtime="6:07" FeatArtist="" />
+    <Track Title="Call Me" Runtime="2:58" FeatArtist="" />
+    <Track Title="Voodoo" Runtime="4:27" FeatArtist="" />
+    <Track Title="Some Things Glitter" Runtime="4:02" FeatArtist="" />
+    <Track Title="C-lebrity" Runtime="3:38" FeatArtist="" />
+    <Track Title="Through the Night" Runtime="4:53" FeatArtist="" />
+    <Track Title="Say It's Not True" Runtime="4:01" FeatArtist="" />
+    <Track Title="Surf's Up...School's Out!" Runtime="5:55" FeatArtist="" />
+    <Track Title="small reprise" Runtime="2:05" FeatArtist="" />
+  </Album>
+  <Album Title="Quake (Original Sound Track)" Artist="Trent Reznor" ReleaseDate="1996-06-22" AverageUserRating="7.3" Runtime="58" Price="10" Tracks="50">
+    <Track Title="Persia Invasion / Quake Theme" Runtime="5:08" FeatArtist="" />
+    <Track Title="The Life Beneath it All / Aftermath / Intermission" Runtime="2:26" FeatArtist="" />
+    <Track Title="Conscience / The Hall of Souls / Whispers" Runtime="8:20" FeatArtist="" />
+    <Track Title="Freezing Vertigo / It is Raped" Runtime="6:05" FeatArtist="" />
+    <Track Title="The Journey / Parallel Dimensions" Runtime="7:24" FeatArtist="" />
+    <Track Title="The Hammer / Life" Runtime="8:38" FeatArtist="" />
+    <Track Title="Ice / Damnation" Runtime="5:35" FeatArtist="" />
+    <Track Title="Peace? / Focus" Runtime="6:28" FeatArtist="" />
+    <Track Title="Violence Inside / Falling" Runtime="3:32" FeatArtist="" />
+    <Track Title="Death / The Reaction" Runtime="5:15" FeatArtist="" />
+  </Album>
+  <Album Title="The Pick of Destiny" Artist="Tenacious D" ReleaseDate="2006-11-14" AverageUserRating="8.2" Runtime="33" Price="15" Tracks="99">
+    <Track Title="Kickapoo" Runtime="4:14" FeatArtist="" />
+    <Track Title="Classico" Runtime="0:58" FeatArtist="Johann Sebastian Bach, Ludwig van Beethoven and Wolfgang Amadeus Mozart" />
+    <Track Title="Baby" Runtime="1:36" FeatArtist="" />
+    <Track Title="Destiny" Runtime="0:37" FeatArtist="" />
+    <Track Title="History" Runtime="1:42" FeatArtist="" />
+    <Track Title="The Government Totally Sucks" Runtime="1:34" FeatArtist="JR Reed" />
+    <Track Title="Master Exploder" Runtime="2:24" FeatArtist="" />
+    <Track Title="The Divide" Runtime="0:22" FeatArtist="" />
+    <Track Title="Papagenu (He's my Sassfrass)" Runtime="2:24" FeatArtist="John C. Reilly" />
+    <Track Title="Dude (I Totally Miss You)" Runtime="2:53" FeatArtist="" />
+    <Track Title="Break-in-City (Storm the Gate!)" Runtime="1:22" FeatArtist="" />
+    <Track Title="Car Chase City" Runtime="2:42" FeatArtist="Paul F Tompkins" />
+    <Track Title="POD" Runtime="5:35" FeatArtist="" />
+    <Track Title="The Metal" Runtime="2:45" FeatArtist="" />
+  </Album>
+  <Album Title="Echoes, Silence, Patience &amp; Grace " Artist="Foo Fighters" ReleaseDate="2007-09-25" AverageUserRating="7.9" Runtime="51" Price="12" Tracks="159">
+    <Track Title="The Pretender" Runtime="4:29" FeatArtist="" />
+    <Track Title="Let it Die" Runtime="4:05" FeatArtist="" />
+    <Track Title="Erase/Replace" Runtime="4:13" FeatArtist="" />
+    <Track Title="Long Road to Ruin" Runtime="3:44" FeatArtist="" />
+    <Track Title="Come Alive" Runtime="5:10" FeatArtist="" />
+    <Track Title="Stranger Things have Happened (Grohl)" Runtime="5:21" FeatArtist="" />
+    <Track Title="Cheer Up, Boys (Your Make Up Is Running)" Runtime="3:41" FeatArtist="" />
+    <Track Title="Summer's End" Runtime="4:37" FeatArtist="" />
+    <Track Title="Ballad of the Beaconsfield Miners (Grohl)" Runtime="2:32" FeatArtist="" />
+    <Track Title="Statues" Runtime="3:47" FeatArtist="" />
+    <Track Title="But, Honestly" Runtime="4:35" FeatArtist="" />
+    <Track Title="Home" Runtime="4:52" FeatArtist="" />
+  </Album>
+  <Album Title="The Christmas Present" Artist="Robbie Williams" ReleaseDate="2019-11-22" AverageUserRating="8.3" Runtime="78" Price="24" Tracks="159">
+    <Track Title="Winter Wonderland" Runtime="2:18" FeatArtist="" />
+    <Track Title="Merry Xmas Everybody" Runtime="3:33" FeatArtist="Jamie Cullum" />
+    <Track Title="Let It Snow! Let It Snow! Let It Snow!" Runtime="1:57" FeatArtist="" />
+    <Track Title="The Christmas Song (Chestnuts Roasting on an Open Fire)" Runtime="3:12" FeatArtist="" />
+    <Track Title="Coco's Christmas Lullaby" Runtime="2:55" FeatArtist="" />
+    <Track Title="Rudolph" Runtime="3:40" FeatArtist="" />
+    <Track Title="Yeah! It's Christmas" Runtime="2:49" FeatArtist="" />
+    <Track Title="It's a Wonderful Life" Runtime="2:51" FeatArtist="Poppa Pete" />
+    <Track Title="Let's Not Go Shopping" Runtime="3:09" FeatArtist="" />
+    <Track Title="Santa Baby" Runtime="3:27" FeatArtist="Helene Fischer" />
+    <Track Title="Best Christmas Ever" Runtime="3:45" FeatArtist="" />
+    <Track Title="One Last Christmas" Runtime="3:33" FeatArtist="" />
+    <Track Title="Coco's Christmas Lullaby Reprise" Runtime="1:14" FeatArtist="" />
+    <Track Title="Time for Change" Runtime="3:30" FeatArtist="" />
+    <Track Title="Idlewild" Runtime="4:08" FeatArtist="" />
+    <Track Title="Darkest Night" Runtime="3:19" FeatArtist="" />
+    <Track Title="Fairytales" Runtime="3:33" FeatArtist="Rod Stewart" />
+    <Track Title="Christmas (Baby Please Come Home)" Runtime="2:43" FeatArtist="Bryan Adams" />
+    <Track Title="Bad Sharon" Runtime="3:40" FeatArtist="Tyson Fury" />
+    <Track Title="Happy Birthday Jesus Christ" Runtime="3:15" FeatArtist="" />
+    <Track Title="New Year's Day" Runtime="3:41" FeatArtist="" />
+    <Track Title="Snowflakes" Runtime="3:41" FeatArtist="" />
+    <Track Title="Home" Runtime="4:10" FeatArtist="" />
+    <Track Title="Soul Transmission" Runtime="4:14" FeatArtist="" />
+  </Album>
+</Albums>

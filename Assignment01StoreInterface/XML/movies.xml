@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Inventory>
+  <Product id="movie">
+    <title>Nyckeln till frihet</title>
+    <rating>9.3</rating>
+    <release-date>03-3-1995</release-date>
+    <price>0</price>
+    <director>Frank Darabont</director>
+    <runtime>02:22:00</runtime>
+  </Product>
+  <Product id="movie">
+    <title>Gudfadern</title>
+    <rating>9.2</rating>
+    <release-date>27-9-1972</release-date>
+    <price>0</price>
+    <director>Francis Ford Coppola</director>
+    <runtime>02:55:00</runtime>
+  </Product>
+  <Product id="movie">
+    <title>En sensation</title>
+    <rating>8.3</rating>
+    <release-date>26-1-1942</release-date>
+    <price>0</price>
+    <director>Orson Welles</director>
+    <runtime>01:59:00</runtime>
+  </Product>
+  <Product id="movie">
+    <title>12 edsvurna män</title>
+    <rating>8.9</rating>
+    <release-date>29-7-1957</release-date>
+    <price>0</price>
+    <director>Sidney Lumet</director>
+    <runtime>01:36:00</runtime>
+  </Product>
+  <Product id="movie">
+    <title>Schindler's List</title>
+    <rating>8.9</rating>
+    <release-date>04-3-1994</release-date>
+    <price>0</price>
+    <director>Steven Spielberg</director>
+    <runtime>03:15:00</runtime>
+  </Product>
+  <Product id="movie">
+    <title>Den gode, den onde, den fule</title>
+    <rating>8.8</rating>
+    <release-date>10-4-1968</release-date>
+    <price>0</price>
+    <director>Sergio Leone</director>
+    <runtime>02:41:00</runtime>
+  </Product>
+  <Product id="movie">
+    <title>Rymdimperiet slår tillbaka</title>
+    <rating>8.7</rating>
+    <release-date>15-8-1980</release-date>
+    <price>0</price>
+    <director>Irvin Kershner</director>
+    <runtime>02:04:00</runtime>
+  </Product>
+  <Product id="movie">
+    <title>Sagan om konungens återkomst</title>
+    <rating>8.9</rating>
+    <release-date>17-12-2003</release-date>
+    <price>0</price>
+    <director>Peter Jackson</director>
+    <runtime>03:21:00</runtime>
+  </Product>
+  <Product id="movie">
+    <title>The Dark Knight</title>
+    <rating>9</rating>
+    <release-date>25-7-2008</release-date>
+    <price>0</price>
+    <director>Christopher Nolan</director>
+    <runtime>02:32:00</runtime>
+  </Product>
+  <Product id="movie">
+    <title>Gudfadern del II</title>
+    <rating>9</rating>
+    <release-date>28-7-1975</release-date>
+    <price>0</price>
+    <director>Francis Ford Coppola</director>
+    <runtime>03:22:00</runtime>
+  </Product>
+  <Product id="movie">
+    <title>Pulp Fiction</title>
+    <rating>8.9</rating>
+    <release-date>25-11-1994</release-date>
+    <price>0</price>
+    <director>Quentin Tarantino</director>
+    <runtime>02:34:00</runtime>
+  </Product>
+  <Product id="movie">
+    <title>Fight Club</title>
+    <rating>8.8</rating>
+    <release-date>25-12-1999</release-date>
+    <price>0</price>
+    <director>David Fincher</director>
+    <runtime>02:19:00</runtime>
+  </Product>
+  <Product id="movie">
+    <title>Psycho</title>
+    <rating>8.5</rating>
+    <release-date>31-10-1960</release-date>
+    <price>0</price>
+    <director>Alfred Hitchcock</director>
+    <runtime>01:49:00</runtime>
+  </Product>
+  <Product id="movie">
+    <title>År 2001 - Ett rymdäventyr</title>
+    <rating>8.3</rating>
+    <release-date>27-8-1968</release-date>
+    <price>0</price>
+    <director>Stanley Kubrick</director>
+    <runtime>02:29:00</runtime>
+  </Product>
+  <Product id="movie">
+    <title>Metropolis</title>
+    <rating>8.3</rating>
+    <release-date>04-4-1927</release-date>
+    <price>0</price>
+    <director>Fritz Lang</director>
+    <runtime>02:33:00</runtime>
+  </Product>
+  <Product id="movie">
+    <title>Stjärnornas krig</title>
+    <rating>8.6</rating>
+    <release-date>16-12-1977</release-date>
+    <price>0</price>
+    <director>George Lucas</director>
+    <runtime>02:01:00</runtime>
+  </Product>
+  <Product id="movie">
+    <title>Sagan om ringen: Härskarringen</title>
+    <rating>8.8</rating>
+    <release-date>19-12-2001</release-date>
+    <price>0</price>
+    <director>Peter Jackson</director>
+    <runtime>02:58:00</runtime>
+  </Product>
+  <Product id="movie">
+    <title>Terminator 2 - Domedagen</title>
+    <rating>8.5</rating>
+    <release-date>13-9-1991</release-date>
+    <price>0</price>
+    <director>James Cameron</director>
+    <runtime>02:17:00</runtime>
+  </Product>
+  <Product id="movie">
+    <title>Matrix</title>
+    <rating>8.7</rating>
+    <release-date>14-7-1999</release-date>
+    <price>0</price>
+    <director>Lana Wachowski.Lilly Wachowski.</director>
+    <runtime>02:16:00</runtime>
+  </Product>
+  <Product id="movie">
+    <title>Jakten på den försvunna skatten</title>
+    <rating>8.4</rating>
+    <release-date>07-8-1981</release-date>
+    <price>0</price>
+    <director>Steven Spielberg</director>
+    <runtime>01:55:00</runtime>
+  </Product>
+  <Product id="movie">
+    <title>Casablanca</title>
+    <rating>8.5</rating>
+    <release-date>11-10-1943</release-date>
+    <price>0</price>
+    <director>Michael Curtiz</director>
+    <runtime>01:42:00</runtime>
+  </Product>
+  <Product id="movie">
+    <title>Trollkarlen från Oz</title>
+    <rating>8</rating>
+    <release-date>02-1-1940</release-date>
+    <price>0</price>
+    <director>Victor Fleming.George Cukor.4 more credits.</director>
+    <runtime>01:42:00</runtime>
+  </Product>
+  <Product id="movie">
+    <title>De sju samurajerna</title>
+    <rating>8.6</rating>
+    <release-date>20-9-1965</release-date>
+    <price>0</price>
+    <director>Akira Kurosawa</director>
+    <runtime>03:27:00</runtime>
+  </Product>
+  <Product id="movie">
+    <title>Forrest Gump</title>
+    <rating>8.8</rating>
+    <release-date>14-10-1994</release-date>
+    <price>0</price>
+    <director>Robert Zemeckis</director>
+    <runtime>02:22:00</runtime>
+  </Product>
+  <Product id="movie">
+    <title>Inception</title>
+    <rating>8.8</rating>
+    <release-date>23-7-2010</release-date>
+    <price>0</price>
+    <director>Christopher Nolan</director>
+    <runtime>02:28:00</runtime>
+  </Product>
+</Inventory>

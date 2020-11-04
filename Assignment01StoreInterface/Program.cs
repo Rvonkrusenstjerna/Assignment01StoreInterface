@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 using System.Linq;
+using System.Xml.Linq;
 
 namespace Assignment01StoreInterface
 {
@@ -11,40 +13,48 @@ namespace Assignment01StoreInterface
         {
 
 
-            //Added Changes
 
-            XmlHandler xh = new XmlHandler();
-            //List<Product> inventory = xh.UserGenerateProductList();
-            //xh.SaveToXML(inventory);
-            //xh.LoadXML();
+            Menu_System ms = new Menu_System();
+
+            ms.welcomeScreen();
+
+            
+            
+            //XmlHandler xh = new XmlHandler();
+            //List<Product> movies = xh.LoadXML("movies.xml");
+            //List<Product> album = xh.martinAlbum();
+
+            //foreach (var item in movies)
+            //{
+            //    album.Add(item);
+            //}
+
+            //xh.SaveToXML(album);
+
+            //Console.WriteLine(Directory.GetCurrentDirectory());
+
+            //C:\Users\Robert\source\repos\Assignment01StoreInterface\Assignment01StoreInterface\Program.cs
+            //C:\Users\Robert\source\repos\Assignment01StoreInterface\Assignment01StoreInterface\bin\Debug\netcoreapp3.1
+
+            
+            
+            
+            
 
 
-            //C:\Users\Renox\Source\Repos\Assignment01StoreInterface\Assignment01StoreInterface\movies.xml
-            List<Product> prod = xh.LoadXML("C:/Users/Renox/Source/Repos/Assignment01StoreInterface/Assignment01StoreInterface/movies.xml");
-            var sortedMovies = prod.OrderByDescending(x => x.Releasedate);
-
-            Console.WriteLine("Movies");
-            foreach (var item in sortedMovies)
-            {
-                item.PrintInfo();
-            }
-            Console.WriteLine();
 
 
-            //Linq, Icomparer
-
-            List<Product> album = xh.martinAlbum();
+            //List<Product> album = xh.martinAlbum();
             //var sortedAlbums = album.OrderBy(x => x.Rating);
-            var sortedAlbums = album.OrderByDescending(x => x.Rating);
+            //var sortedAlbums = album.OrderByDescending(x => x.Rating);
 
-            Console.WriteLine("Album");
-            foreach (var x in sortedAlbums)
-            {
-                x.PrintInfo();
+            //Console.WriteLine("Album");
+            //foreach (var x in sortedAlbums)
+            //{
+            //    x.PrintInfo();
 
-            }
+            //}
 
-            //xh.SaveToXML(xh.ScrapeMopvies());
 
 
 

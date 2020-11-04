@@ -26,6 +26,11 @@ namespace Assignment01StoreInterface
         
         }
 
+        public String trackInfo()
+        {
+            return $"{Title} {Runtime} Featuring: {Featuring}";
+        }
+
 
 
 

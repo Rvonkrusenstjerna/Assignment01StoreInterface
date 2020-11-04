@@ -29,7 +29,7 @@ namespace Assignment01StoreInterface
 
         public override void PrintInfo()
         {
-            Console.WriteLine($"Title: {Title} Rating: {Rating} DateTime: {Releasedate.ToString("yyyy-MM-dd")} Runtime: {Runtime} Director: {Director} Price: {Price}");
+            Console.WriteLine($"{Title} Rating: {Rating} DateTime: {Releasedate.ToString("yyyy-MM-dd")} Runtime: {Runtime} Director: {Director} Price: {Price}");
         }
 
     }
