@@ -16,7 +16,7 @@ namespace Assignment01StoreInterface
 
             Menu_System ms = new Menu_System();
 
-            ms.welcomeScreen();
+            ms.WelcomeScreen();
 
             
             

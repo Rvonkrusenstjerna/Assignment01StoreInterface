@@ -40,7 +40,9 @@ namespace Assignment01StoreInterface
                 
                 
                 //Using the Htmldocument, we loop thorugh all nodes (tags in the html) mathching
-                //the description we ask for, in this case every node containing movies and their information.
+                //the description we ask for, in this case every node containing movies and their information,
+                //placed inside a div tag, with a class containing 'lister-item-content'.
+
                 foreach (var item in doc.DocumentNode.SelectNodes("//div[@class[contains(.,'lister-item-content')]]"))
                 {
 
@@ -67,7 +69,7 @@ namespace Assignment01StoreInterface
                     double rating = double.Parse(rateString, CultureInfo.InvariantCulture);
 
                     
-                    //Fetches the link to the current movie's own profile page to get more in depth information
+                    //Fetches the link to the current movie's own profile page to get more indepth information
                     //about its Dirctor, release date etc.
 
                     string link = "https://www.imdb.com"+item.SelectSingleNode(".//h3/a").GetAttributeValue("href", "");
@@ -81,16 +83,16 @@ namespace Assignment01StoreInterface
                     string time = subDoc.DocumentNode.SelectSingleNode(".//*[@class[contains(.,'subtext')]]/time").GetAttributeValue("datetime", "");
                     TimeSpan ts = XmlConvert.ToTimeSpan(time);
 
-                    String director = "unknown";
 
-                    
+
+                    String director = "unknown";
                     //If node contains a <h4> tag with the text 'Director', store inner text of its inner <a> tag. 
-                    if(subDoc.DocumentNode.SelectSingleNode(".//div[h4[text() = 'Director:']]/a")  != null)
+                    if (subDoc.DocumentNode.SelectSingleNode(".//div[h4[text() = 'Director:']]/a")  != null)
                     {
                         director = subDoc.DocumentNode.SelectSingleNode(".//div[h4[text() = 'Director:']]/a").InnerText;
                     }
                     
-                    //If not, look for <h4> containing Directors and store their names in String.
+                    //If not, look for <h4> containing 'Directors' and store their names in String.
                     else if (subDoc.DocumentNode.SelectNodes(".//div[h4[text() = 'Directors:']]/a") !=  null)
                     {
 
@@ -100,6 +102,7 @@ namespace Assignment01StoreInterface
                         }
 
                     }
+                
                     
 
                     //Creates new movie object using scraped information and adds it to list.
@@ -117,86 +120,6 @@ namespace Assignment01StoreInterface
         }
 
             
-            
-            
-            public List<Product> UserGenerateProductList()
-            {
-                //This Function returns a list of products created by the user;
-                List<Product> products = new List<Product>();
-                
-                do
-                {
-
-                    string choice = question("Is this a movie or album? m/a");
-                    string title = question("Enter Product Name");
-                    string dirArt = question("Enter Director or Artists name");
-                    //int rating = Convert.ToInt32(question("Enter Rating (0-10)"));
-                    int rating = random.Next(0,10);
-                    DateTime release = DateTime.ParseExact(question("Enter Release Date (dd-mm-yyyy)"), "d-M-yyyy", CultureInfo.InvariantCulture);
-
-                    //Console.WriteLine("Enter Price (kr)");
-                    //double price = Convert.ToDouble(Enter Rating (0-10));
-                    double price = random.Next(10,300);
-                    
-                    if (choice == "m")
-                    {
-                        //make Movie
-
-                        Console.WriteLine("Enter Runtime (h:m:s)");
-                        TimeSpan runTime = TimeSpan.Parse(Console.ReadLine());
-
-                        products.Add(new Movie(title, rating, release, runTime, price, dirArt));
-                        Console.WriteLine("---");
-                        Console.WriteLine(runTime);
-                    }
-
-                    else
-                    {
-                        //make Album
-                        List<Track> tracks = new List<Track>();
-
-                        do
-                        {
-                            Console.WriteLine("Track Title");
-                            String trackTitle = Console.ReadLine();
-
-                            Console.WriteLine("Track Length (h:m:s)");
-                            TimeSpan trackTime = TimeSpan.Parse(Console.ReadLine());
-
-                        
-                        String features = "Various Artists";
-
-                            tracks.Add(new Track(trackTitle, trackTime, features));
-
-
-                            Console.WriteLine("Add other track? (y/n)");
-
-                        } while (Console.ReadLine() != "");
-
-
-                        products.Add(new Album(title, rating, release, price, dirArt, tracks));
-
-                    }
-
-                    Console.WriteLine("Add more Products?");
-
-                } while (Console.ReadLine() != "");
-
-
-                return products;
-
-            }
-
-
-            private String question(String quest)
-            {
-                Console.WriteLine(quest);
-                String Answer = Console.ReadLine();
-                Console.Clear();
-                return Answer;
-                
-            }
-        
             public List<Product> LoadXML(String url)
             {
                 
@@ -231,19 +154,26 @@ namespace Assignment01StoreInterface
                     //this is an album
                     else if (item.FirstAttribute.Value == "album")
                     {
+                        XElement xmlTracks = item.Element("tracks");
+                    
                         dirArt = item.Element("artist").Value;
-                        List<Track> tracks = new List<Track>();
+                        List<Track> tracklist = new List<Track>();
 
-                    foreach (var track in item.Elements())
-                    {
+                        foreach (var track in xmlTracks.Elements("track"))
+                        {
+                            string tTitle = track.Element("track-title").Value;
+                            TimeSpan tSpan = TimeSpan.Parse(track.Element("track-runtime").Value);
+                            string tFeat = track.Element("featuring").Value;
+ 
+
+                            tracklist.Add(new Track(tTitle, tSpan, tFeat));
+                        }
+
+
+                        products.Add(new Album(title, rating, release,dirArt,tracklist));
+
 
                     }
-
-
-                        products.Add(new Album(title, rating, release,dirArt,tracks));
-
-
-                }
 
                 }
 
@@ -252,54 +182,6 @@ namespace Assignment01StoreInterface
 
                 
             
-            
-            
-                
-            public List<Product> martinAlbum()
-            {
-                List<Product> album = new List<Product>();
-
-                //XElement aXml = XElement.Load("C:/Users/Renox/Source/Repos/Assignment01StoreInterface/Assignment01StoreInterface/AlbumData.xml");
-                XElement aXml = XElement.Load("AlbumData.xml");
-
-
-            foreach (var item in aXml.Elements())
-                {
-
-                    String title = item.Attribute("Title").Value;
-                    String artist = item.Attribute("Artist").Value;
-                    DateTime release = DateTime.Parse(item.Attribute("ReleaseDate").Value);
-                    Double rating = Double.Parse(item.Attribute("AverageUserRating").Value, CultureInfo.InvariantCulture);
-                    Double price = Double.Parse(item.Attribute("Price").Value);
-
-                    List<Track> tracks = new List<Track>();
-
-
-                foreach (var track in item.Elements("Track"))
-                {
-                    string tTitle = track.Attribute("Title").Value;
-                    TimeSpan tTs = TimeSpan.Parse("0:"+track.Attribute("Runtime").Value);
-                    string tArt = track.Attribute("FeatArtist").Value;
-
-                    tracks.Add(new Track(tTitle,tTs,tArt));
-
-                }
-                   
-
-                Product newAlbum = new Album(title, rating, release, artist, tracks);
-                album.Add(new Album(title, rating, release, artist, tracks));
-
-            }
-
-
-
-
-            return album;
-                
-            }
-            
-            
-        
             public void SaveToXML(List<Product> products)
             {
                 Console.WriteLine("Make XML ACTIVATED");

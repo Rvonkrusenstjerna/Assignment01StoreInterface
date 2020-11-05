@@ -11,51 +11,54 @@ namespace Assignment01StoreInterface
         
         private XmlHandler xh = new XmlHandler();
 
-        public void welcomeScreen()
+        public void WelcomeScreen()
         {
             bool running = true;
             do
             {
-                string choice = "";
+                string choice;
                 do
                 {
                 
                     Console.Clear();
                     Console.WriteLine("Welcome To Hans-Johnnys Media Store!");
-                    Console.WriteLine("Please Select an option!");
+                    Console.WriteLine("Please Select an option!\n");
                 
                     Console.WriteLine($"1.Check Inventory");
                     Console.WriteLine("2.Contact Info");
                     Console.WriteLine("3.GTFO");
                 
                     choice = Console.ReadLine();
+
                 } while (choice != "1"  &&   choice !=  "2" && choice != "3");
 
                 if (choice == "1")
                 {
-                    inventoryMenu();
+                    InventoryMenu();
                 }
                 else if (choice == "2")
                 {
-                    contactMenu();
+                    ContactMenu();
                 }
                 else if (choice == "3")
                 {
+                    Console.Clear();
+                    Console.WriteLine("Thank you come again.");
                     running = false;
                 }
             } while (running);
         }
 
 
-        private void contactMenu()
+        private void ContactMenu()
         {
            
             Console.Clear();
 
             Console.WriteLine("Visit us at:");
-            Console.WriteLine("Hans-Johnny's Media Store.\t Pretendstreet 66.\tGöteholm\t\n");
+            Console.WriteLine("Hans-Johnny's Media Store. Pretendstreet 66. Göteholm\n");
             Console.WriteLine("Billing Address:");
-            Console.WriteLine("Kungsbäcksvägen 45.\t 801 76.\tGävle\t");
+            Console.WriteLine("Kungsbäcksvägen 45. 80176. Gävle.");
 
             Console.WriteLine("Press The Any Key To Exit");
             Console.ReadKey();
@@ -63,22 +66,21 @@ namespace Assignment01StoreInterface
 
         }
 
-        private void inventoryMenu()
+        private void InventoryMenu()
         {
             bool running = true;
 
             do
             {
-                string choice = "";
+                string choice;
                 do
                 {
                     Console.Clear();
-                    Console.WriteLine("Inventory");
+                    Console.WriteLine("Inventory\t");
 
                     Console.WriteLine("1. Load from XML");
-                    Console.WriteLine("2. Make your own inventory");
-                    Console.WriteLine("3. Scrape Movies Internet");
-                    Console.WriteLine("4. Exit");
+                    Console.WriteLine("2. Scrape Movies Internet");
+                    Console.WriteLine("3. Exit");
 
                     choice = Console.ReadLine();
                 } while (choice != "1" && choice != "2" && choice != "3" && choice != "4");
@@ -86,18 +88,16 @@ namespace Assignment01StoreInterface
 
                 if (choice == "1")
                 {
-                    xmlMenu();
+                    XmlMenu();
                 }
+               
                 else if (choice == "2")
                 {
-                    //contactMenu();
+                    ScrapeMenu();
                 }
                 else if (choice == "3")
                 {
-                    scrapeMenu();
-                }
-                else if (choice == "4")
-                {
+                    
                     running = false;
                 }
 
@@ -108,7 +108,7 @@ namespace Assignment01StoreInterface
 
         }
 
-        private void scrapeMenu()
+        private void ScrapeMenu()
         {
 
             Console.Clear();
@@ -123,31 +123,68 @@ namespace Assignment01StoreInterface
             {
                 item.PrintInfo();
             }
-
+            Console.WriteLine("\nPress any key to exit");
             Console.ReadKey();
 
         }
 
-        private void xmlMenu()
+        private void XmlMenu()
         {
             Console.Clear();
             Console.WriteLine("XML Inventory");
 
             List<Product> products = xh.LoadXML("XML/inventory.xml");
 
+            List<Product> movies = new List<Product>();
+            List<Product> album = new List<Product>();
+
             foreach (var item in products)
             {
-                item.PrintInfo();
+                if (item is Album)
+                {
+                    album.Add(item);
+                }
+                else if (item is Movie)
+                {
+                    movies.Add(item);
+                }
+            }
+
+
+            if (movies.Count > 0)
+            {
+                Console.WriteLine("Movies\n");
+                
+                var sortedMovies = movies.OrderByDescending(x => x.Releasedate);
+                foreach (var movie in sortedMovies)
+                {
+                    movie.PrintInfo();
+                }
+                Console.WriteLine();
             }
 
 
 
+            if (album.Count > 0)
+            {
+                Console.WriteLine("Album\n");
+                var sortedAlbums = album.OrderByDescending(x => x.Rating);
 
-
-
+                foreach (var albumItem in sortedAlbums)
+                {
+                    albumItem.PrintInfo();
+                    Console.WriteLine();
+                }
+                
+            }
+            Console.WriteLine("Press any key to exit");
             Console.ReadKey();
 
+
+
         }
+
+        
 
 
 
