@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -132,51 +133,60 @@ namespace Assignment01StoreInterface
         {
             Console.Clear();
             Console.WriteLine("XML Inventory");
-
-            List<Product> products = xh.LoadXML("XML/inventory.xml");
-
-            List<Product> movies = new List<Product>();
-            List<Product> album = new List<Product>();
-
-            foreach (var item in products)
+            
+            if (File.Exists("XML/inventory.xml"))
             {
-                if (item is Album)
+                List<Product> products = xh.LoadXML("XML/inventory.xml");
+
+                List<Product> movies = new List<Product>();
+                List<Product> album = new List<Product>();
+
+                foreach (var item in products)
                 {
-                    album.Add(item);
+                    if (item is Album)
+                    {
+                        album.Add(item);
+                    }
+                    else if (item is Movie)
+                    {
+                        movies.Add(item);
+                    }
                 }
-                else if (item is Movie)
+
+
+                if (movies.Count > 0)
                 {
-                    movies.Add(item);
-                }
-            }
+                    Console.WriteLine("Movies\n");
 
-
-            if (movies.Count > 0)
-            {
-                Console.WriteLine("Movies\n");
-                
-                var sortedMovies = movies.OrderByDescending(x => x.Releasedate);
-                foreach (var movie in sortedMovies)
-                {
-                    movie.PrintInfo();
-                }
-                Console.WriteLine();
-            }
-
-
-
-            if (album.Count > 0)
-            {
-                Console.WriteLine("Album\n");
-                var sortedAlbums = album.OrderByDescending(x => x.Rating);
-
-                foreach (var albumItem in sortedAlbums)
-                {
-                    albumItem.PrintInfo();
+                    var sortedMovies = movies.OrderByDescending(x => x.Releasedate);
+                    foreach (var movie in sortedMovies)
+                    {
+                        movie.PrintInfo();
+                    }
                     Console.WriteLine();
                 }
-                
+
+
+
+                if (album.Count > 0)
+                {
+                    Console.WriteLine("Album\n");
+                    var sortedAlbums = album.OrderByDescending(x => x.Rating);
+
+                    foreach (var albumItem in sortedAlbums)
+                    {
+                        albumItem.PrintInfo();
+                        Console.WriteLine();
+                    }
+
+                }
             }
+
+            else
+            {
+                Console.WriteLine("File not Found");
+            }
+            
             Console.WriteLine("Press any key to exit");
             Console.ReadKey();
 

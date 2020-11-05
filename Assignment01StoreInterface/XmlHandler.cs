@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Reflection.Metadata;
@@ -125,57 +126,60 @@ namespace Assignment01StoreInterface
                 
                 List<Product> products = new List<Product>();
 
-                XElement XDoc = XElement.Load(url);
-
-
-                foreach (XElement item in XDoc.Elements())
+                if (File.Exists(url))
                 {
-
-                    string title = item.Element("title").Value;
+                    XElement XDoc = XElement.Load(url);
                     
-
-                    double rating = double.Parse(item.Element("rating").Value, CultureInfo.InvariantCulture);
-                    double price = Convert.ToDouble(item.Element("price").Value);
-                    string dirArt = "";
-                    DateTime release = DateTime.ParseExact(item.Element("release-date").Value, "d-M-yyyy", CultureInfo.InvariantCulture);
-
-                    TimeSpan runtime = TimeSpan.Parse(item.Element("runtime").Value);
-
-                
-
-                    //This is a movie
-                    if (item.FirstAttribute.Value == "movie")
+                    foreach (XElement item in XDoc.Elements())
                     {
-                        dirArt = item.Element("director").Value;
-                        products.Add(new Movie(title, rating, release,runtime,dirArt));
 
-                    }
-                    
-                    //this is an album
-                    else if (item.FirstAttribute.Value == "album")
-                    {
-                        XElement xmlTracks = item.Element("tracks");
-                    
-                        dirArt = item.Element("artist").Value;
-                        List<Track> tracklist = new List<Track>();
+                        string title = item.Element("title").Value;
 
-                        foreach (var track in xmlTracks.Elements("track"))
+
+                        double rating = double.Parse(item.Element("rating").Value, CultureInfo.InvariantCulture);
+                        double price = Convert.ToDouble(item.Element("price").Value);
+                        string dirArt = "";
+                        DateTime release = DateTime.ParseExact(item.Element("release-date").Value, "d-M-yyyy", CultureInfo.InvariantCulture);
+
+                        TimeSpan runtime = TimeSpan.Parse(item.Element("runtime").Value);
+
+
+
+                        //This is a movie
+                        if (item.FirstAttribute.Value == "movie")
                         {
-                            string tTitle = track.Element("track-title").Value;
-                            TimeSpan tSpan = TimeSpan.Parse(track.Element("track-runtime").Value);
-                            string tFeat = track.Element("featuring").Value;
- 
+                            dirArt = item.Element("director").Value;
+                            products.Add(new Movie(title, rating, release, runtime, dirArt));
 
-                            tracklist.Add(new Track(tTitle, tSpan, tFeat));
                         }
 
+                        //this is an album
+                        else if (item.FirstAttribute.Value == "album")
+                        {
+                            XElement xmlTracks = item.Element("tracks");
 
-                        products.Add(new Album(title, rating, release,dirArt,tracklist));
+                            dirArt = item.Element("artist").Value;
+                            List<Track> tracklist = new List<Track>();
 
+                            foreach (var track in xmlTracks.Elements("track"))
+                            {
+                                string tTitle = track.Element("track-title").Value;
+                                TimeSpan tSpan = TimeSpan.Parse(track.Element("track-runtime").Value);
+                                string tFeat = track.Element("featuring").Value;
+
+                                tracklist.Add(new Track(tTitle, tSpan, tFeat));
+                            }
+
+
+                            products.Add(new Album(title, rating, release, dirArt, tracklist));
+
+
+                        }
 
                     }
-
-                }
+            }
+            
+                
 
                 return products;
             }
