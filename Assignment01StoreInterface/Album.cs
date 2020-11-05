@@ -18,13 +18,13 @@ namespace Assignment01StoreInterface
             this.Runtime = getRunTime();
         }
 
-        public Album(string title, double rating, DateTime release, double pris, string artist, List<Track> tracks): base(title, rating, release, pris)
+        public Album(string title, double rating, DateTime release, double pris, string artist, List<Track> tracks) : base(title, rating, release, pris)
         {
             this.Artist = artist;
             this.Tracks = tracks;
             this.Runtime = getRunTime();
         }
-        
+
 
         public void AddTrack(Track nTrack)
         {
@@ -32,8 +32,8 @@ namespace Assignment01StoreInterface
             Runtime = getRunTime();
 
         }
-        
-        
+
+
         public int trackCount()
         {
             return Tracks.Count;
@@ -42,7 +42,7 @@ namespace Assignment01StoreInterface
         private TimeSpan getRunTime()
         {
 
-            TimeSpan total =new TimeSpan(0,0,0);
+            TimeSpan total = new TimeSpan(0, 0, 0);
 
             foreach (var item in Tracks)
             {
@@ -51,12 +51,12 @@ namespace Assignment01StoreInterface
             }
 
             return total;
-        
+
         }
 
         public override void PrintInfo()
         {
-            Console.WriteLine($"{Title} Rating: {Rating} DateTime: {Releasedate.ToString("yyyy-MM-dd")} Runtime: {Runtime} Artist: {Artist} Price: {Price}");
+            Console.WriteLine($"{Title} Rating: {Rating} DateTime: {Releasedate.ToString("yyyy-MM-dd")} Runtime: {Runtime} Artist: {Artist} Price: {Price}kr");
 
             foreach (var item in Tracks)
             {

@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Assignment01StoreInterface
 {
@@ -11,7 +9,7 @@ namespace Assignment01StoreInterface
         public DateTime Releasedate { set; get; }
         public TimeSpan Runtime { set; get; }
         public double Price { set; get; }
-        
+
         public Product(string title, double rating, DateTime date)
         {
 
@@ -34,10 +32,10 @@ namespace Assignment01StoreInterface
 
 
 
-        
+
         public virtual void PrintInfo()
         {
-                
+
         }
 
 
